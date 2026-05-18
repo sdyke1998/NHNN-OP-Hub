@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qveA7Ocnrjs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sd199\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.23.0\\microsoft.visualstudio.azure.containers.tools.targets.1.23.0.nupkg.sha512"
+  ],
+  "logs": []
+}
