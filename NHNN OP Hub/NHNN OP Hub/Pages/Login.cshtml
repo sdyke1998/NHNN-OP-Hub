@@ -1,0 +1,29 @@
+﻿@page
+@model NHNN_OP_Hub.Pages.LoginModel
+@{
+}
+
+<div class="top-bar">
+    <h1 style="text-align:center">NHNN Outpatient hub</h1>
+</div>
+
+<div class="centre">
+    <form id="loginForm" method="POST">
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required/>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required />
+        </div>
+
+        <button type="submit" id="loginButton">Log in</button>
+    </form>
+</div>
+
+<div class="bottom-bar">
+
+</div>
