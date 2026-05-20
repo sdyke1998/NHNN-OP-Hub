@@ -1,0 +1,70 @@
+﻿@page
+@model NHNN_OP_Hub.Pages.PostingModel
+@{
+}
+
+<div class="main-body">
+    r
+
+    <div class="pt-table">
+        <table class="pt-table">
+
+            <thead>
+                <tr>Patient name</tr>
+                <tr>MRN</tr>
+                <tr>Latest Prescription</tr>
+                <tr>Tracking Number</tr>
+                <tr>Returned?</tr>
+            </thead>
+
+        </table>
+    </div>
+
+    <div class="pt-entry-form">
+        <form id="pt-entry" method="POST">
+
+            <div class="form-group">
+                <label for="ptName">Patient Name</label>
+                <input type="text" id="ptName" name="ptName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="MRN">MRN</label>
+                <input type="text" id="MRN" name="MRN" required />
+            </div>
+
+            <div class="form-group">
+                <label for="trackingNum">Tracking Number</label>
+                <input type="text" id="trackingNum" name="trackingNum" required />
+            </div>
+
+            <div class="form-group">
+                <label for="isPaying">Is paying</label>
+                <input type="checkbox" id="isPaying" name="isPaying" required />
+            </div>
+
+            <div class="form-group">
+                <label for="isPrivate">Private prescription</label>
+                <input type="checkbox" id="isPrivate" name="isPrivate" required />
+            </div>
+
+            <div class="form-group">
+                <label for="rxCost">Prescription Cost</label>
+                <input type="number" id="rxCost" name="rxCost" />
+            </div>
+
+            <div class="form-group">
+                <label for="reciptNum">Recipt Number</label>
+                <input type="text" id="reciptNum" name="reciptNum" />
+            </div>
+
+            <div class="form-group">
+                <label for="hasReturned">Prescription returned?</label>
+                <input type="checkbox" id="hasReturned" name="hasReturned"/>
+            </div>
+
+            <button type="submit" id="loginButton">Enter</button>
+            <button>Clear</button>
+        </form>
+    </div>
+</div>
