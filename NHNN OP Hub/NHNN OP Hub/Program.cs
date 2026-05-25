@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace NHNN_OP_Hub
 {
     public class Program
@@ -5,6 +9,13 @@ namespace NHNN_OP_Hub
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Login";
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                });
 
             // Add services to the container.
             builder.Services.AddRazorPages();
@@ -23,6 +34,7 @@ namespace NHNN_OP_Hub
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapStaticAssets();

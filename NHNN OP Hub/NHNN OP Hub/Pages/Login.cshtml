@@ -22,6 +22,12 @@
 
         <button type="submit" id="loginButton">Log in</button>
     </form>
+    @{
+        if(Model.ErrorMessage is not null)
+        {
+            <p style="color:red">@Model.ErrorMessage</p>
+        }
+    }
 </div>
 
 <div class="bottom-bar">
