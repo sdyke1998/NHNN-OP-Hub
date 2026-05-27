@@ -3,11 +3,20 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Security.Claims;
+using NHNN_OP_Hub.Data;
+using NHNN_OP_Hub.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace NHNN_OP_Hub.Pages
 {
     public class LoginModel : PageModel
     {
+        private readonly UserDbContext dbContext;
+        public LoginModel(UserDbContext _dbContext)
+        {
+            this.dbContext = _dbContext;
+        }
+
         [BindProperty]
         public string Username { get; set; }
 
@@ -21,7 +30,14 @@ namespace NHNN_OP_Hub.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-            if (true) //You will need to ammend this to work with user databse
+            User user = await dbContext.Users.FirstOrDefaultAsync(u => u.username == Username);
+            if(user is null)
+            {
+                ErrorMessage = "This username was not found";
+                return Page();
+            }
+
+            if (user.password == Password) //You will need to ammend this to work with user database
             {
                 List<Claim> claims = new List<Claim>
                 {

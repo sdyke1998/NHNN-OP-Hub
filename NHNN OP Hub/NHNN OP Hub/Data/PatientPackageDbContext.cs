@@ -3,9 +3,8 @@ using NHNN_OP_Hub.Models;
 
 namespace NHNN_OP_Hub.Data
 {
-    public class AppDbContext : DbContext
+    public class PatientPackageDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
         public DbSet<PatientPackage> PatientPackages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -19,13 +18,13 @@ namespace NHNN_OP_Hub.Data
         }
 
         protected readonly IConfiguration Configuration;
-        public AppDbContext(IConfiguration configuration)
+        public PatientPackageDbContext(IConfiguration configuration)
         {
             this.Configuration = configuration;
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = Configuration.GetConnectionString("DbConnectionString");
+            string connectionString = Configuration.GetConnectionString("PackagesConnectionString");
             optionsBuilder.UseSqlServer(connectionString);
         }
     }

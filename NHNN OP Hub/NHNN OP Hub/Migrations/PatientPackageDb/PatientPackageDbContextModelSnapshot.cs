@@ -8,10 +8,10 @@ using NHNN_OP_Hub.Data;
 
 #nullable disable
 
-namespace NHNN_OP_Hub.Migrations
+namespace NHNN_OP_Hub.Migrations.PatientPackageDb
 {
-    [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(PatientPackageDbContext))]
+    partial class PatientPackageDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -65,30 +65,6 @@ namespace NHNN_OP_Hub.Migrations
                     b.HasDiscriminator<string>("PackageType").HasValue("PatientPackage");
 
                     b.UseTphMappingStrategy();
-                });
-
-            modelBuilder.Entity("NHNN_OP_Hub.Models.User", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
-
-                    b.Property<int>("access")
-                        .HasColumnType("int");
-
-                    b.Property<string>("password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("NHNN_OP_Hub.Models.OutpatientPackage", b =>

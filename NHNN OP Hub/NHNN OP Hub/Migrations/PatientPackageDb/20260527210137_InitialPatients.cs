@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace NHNN_OP_Hub.Migrations
+namespace NHNN_OP_Hub.Migrations.PatientPackageDb
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialPatients : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -36,21 +36,6 @@ namespace NHNN_OP_Hub.Migrations
                 {
                     table.PrimaryKey("PK_PatientPackages", x => x.WorkRequestID);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Users",
-                columns: table => new
-                {
-                    ID = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    username = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    access = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Users", x => x.ID);
-                });
         }
 
         /// <inheritdoc />
@@ -58,9 +43,6 @@ namespace NHNN_OP_Hub.Migrations
         {
             migrationBuilder.DropTable(
                 name: "PatientPackages");
-
-            migrationBuilder.DropTable(
-                name: "Users");
         }
     }
 }
