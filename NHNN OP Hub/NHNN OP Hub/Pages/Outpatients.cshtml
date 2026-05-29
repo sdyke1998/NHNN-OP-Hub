@@ -3,18 +3,33 @@
 @{
 }
 
-<div class="main-body">r
+<div class="main-body">
 
     <div class="pt-table">
         <table class="pt-table">
 
             <thead>
-                <td>Patient name</td>
-                <td>MRN</td>
-                <td>Latest Prescription</td>
-                <td>Has Collected</td>
-                <td>Due to collect</td>
+                <tr>
+                    <th>Patient name</th>
+                    <th>MRN</th>
+                    <th>Latest Prescription</th>
+                    <th>Has Collected</th>
+                    <th>Due to collect</th>
+                </tr>
             </thead>
+            <tbody>
+                @{
+                    foreach (var pt in Model.PatientsToDisplay)
+                    {
+                        <tr>
+                            <td>@pt.Name</td>
+                            <td>@pt.MRN</td>
+                            <td>@pt.CollectionDate</td>
+                            <td>@pt.Name</td>
+                        </tr>
+                    }
+                }
+            </tbody>
 
         </table>
     </div>

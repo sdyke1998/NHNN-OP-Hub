@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -7,6 +7,7 @@
     <RootNamespace>NHNN_OP_Hub</RootNamespace>
     <UserSecretsId>398adf47-5b35-448c-9a65-37b6351b14b4</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <AssemblyTitle>NHNN_OP_Hub</AssemblyTitle>
   </PropertyGroup>
 
   <ItemGroup>

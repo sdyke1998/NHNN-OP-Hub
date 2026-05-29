@@ -10,7 +10,7 @@ namespace NHNN_OP_Hub.Pages
     public class OutpatientsModel : PageModel
     {
         public PatientPackageDbContext dbContext;
-        List<OutpatientPackage> PatientsToDisplay;
+        public List<OutpatientPackage> PatientsToDisplay;
 
         public OutpatientsModel(PatientPackageDbContext _dbContext)
         {
@@ -19,7 +19,7 @@ namespace NHNN_OP_Hub.Pages
         public void OnGet()
         {
             PatientsToDisplay = dbContext.PatientPackages.OfType<OutpatientPackage>()
-                .Where(op => op.Name.Length < 5).ToList<OutpatientPackage>();
+                .Where(op => op.Name != null).ToList<OutpatientPackage>();
         }
     }
 }

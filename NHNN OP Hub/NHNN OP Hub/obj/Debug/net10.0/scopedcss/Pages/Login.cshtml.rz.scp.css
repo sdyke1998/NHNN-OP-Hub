@@ -1,0 +1,45 @@
+/*Subject to change*/
+
+.title[b-9frygalbvd]{
+    text-align: center;
+    color:var(--uclh-teal);
+}
+
+.centre[b-9frygalbvd]{
+    background-color: white;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-group[b-9frygalbvd]{
+    margin-bottom: 20px;
+}
+
+.form-group label[b-9frygalbvd] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0; /*May change colour*/
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.form-group input:focus[b-9frygalbvd] {
+    border-color: #a0aec0;
+}
+
+.btn-submit[b-9frygalbvd] {
+    width: 100%;
+    background-color: var(--uclh-teal);
+    color: white;
+    padding: 14px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
