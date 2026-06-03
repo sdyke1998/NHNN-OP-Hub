@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore.Storage;
+using System.ComponentModel.DataAnnotations;
 
 namespace NHNN_OP_Hub.Models
 {
@@ -25,7 +26,7 @@ namespace NHNN_OP_Hub.Models
     public class OutpatientPackage : PatientPackage
     {
         public int? TicketNumber { get; set; }
-        public DateTime CollectionDate { get; set; }
+        public DateOnly CollectionDate { get; set; }
         public bool HasCollected { get; set; }
     }
 }

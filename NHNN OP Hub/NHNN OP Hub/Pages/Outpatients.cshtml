@@ -1,31 +1,69 @@
 ﻿@page
 @model NHNN_OP_Hub.Pages.OutpatientsModel
 @{
+    Layout = "~/Pages/Shared/_MainLayout.cshtml";
 }
 
 <div class="main-body">
 
+    <div class="search-db">
+        <form id="search-form" method="POST" asp-page-handler="Search">
+
+            <div class="search-group">
+                <label for="byName">Search by name</label>
+                <input type="text" id="byName" asp-for="ByName"/>
+            </div>
+
+            <div class="search-group">
+                <label for="byMRN">Search by MRN</label>
+                <input type="text" id="byMRN" asp-for="ByMRN"/>
+            </div>
+
+            <div class="search-group">
+                <label for="byDate">Search by Date</label>
+                <input type="date" id="byDate" asp-for="ByDate" value=""/>
+            </div>
+        
+            <button type="submit" id="searchButton">Search</button>
+            <button>Clear</button>
+        </form>
+    </div>
+
     <div class="pt-table">
-        <table class="pt-table">
+
+        <table>
 
             <thead>
                 <tr>
-                    <th>Patient name</th>
+                    <th>Work request ID</th>
+                    <th>Name</th>
                     <th>MRN</th>
-                    <th>Latest Prescription</th>
-                    <th>Has Collected</th>
-                    <th>Due to collect</th>
+                    <th>Date dispensed</th>
+                    <th>Is paying?</th>
+                    <th>Is private?</th>
+                    <th>Prescription cost</th>
+                    <th>Recipt number</th>
+                    <th>Ticket number</th>
+                    <th>Due to collect on</th>
+                    <th>Has been collected?</th>
                 </tr>
             </thead>
             <tbody>
                 @{
-                    foreach (var pt in Model.PatientsToDisplay)
+                    @foreach (var pt in Model.PackagesToDisplay)
                     {
                         <tr>
+                            <td>@pt.WorkRequestID</td>
                             <td>@pt.Name</td>
                             <td>@pt.MRN</td>
+                            <td>@pt.DateDispensed</td>
+                            <td>@pt.IsPaying</td>
+                            <td>@pt.IsPrivate</td>
+                            <td>@pt.RxCost</td>
+                            <td>@pt.ReciptNumber</td>
+                            <td>@pt.TicketNumber</td>
                             <td>@pt.CollectionDate</td>
-                            <td>@pt.Name</td>
+                            <td>@pt.HasCollected</td>
                         </tr>
                     }
                 }
@@ -33,53 +71,54 @@
 
         </table>
     </div>
+    </div>
 
     <div class="pt-entry-form">
-        <form id="pt-entry" method="POST">
+    <form id="pt-entry" method="POST" asp-page-handler="Enter">
 
             <div class="form-group">
                 <label for="ptName">Patient Name</label>
-                <input type="text" id="ptName" name="ptName" required />
+                <input type="text" id="ptName" asp-for="ptName" required />
             </div>
 
             <div class="form-group">
                 <label for="MRN">MRN</label>
-                <input type="text" id="MRN" name="MRN" required />
+                <input type="text" id="MRN" asp-for="MRN" required />
             </div>
 
             <div class="form-group">
                 <label for="ticketNum">Ticket Number</label>
-                <input type="number" id="ticketNum" name="ticketNum" required />
+                <input type="number" id="ticketNum" asp-for="ticketNum" />
             </div>
 
             <div class="form-group">
                 <label for="isPaying">Is paying</label>
-                <input type="checkbox" id="isPaying" name="isPaying" required />
+                <input type="checkbox" id="isPaying" asp-for="isPaying" required />
             </div>
 
             <div class="form-group">
                 <label for="isPrivate">Private prescription</label>
-                <input type="checkbox" id="isPrivate" name="isPrivate" required />
+                <input type="checkbox" id="isPrivate" asp-for="isPrivate" required />
             </div>
 
             <div class="form-group">
                 <label for="rxCost">Prescription Cost</label>
-                <input type="number" id="rxCost" name="rxCost"/>
+                <input type="number" id="rxCost" asp-for="rxCost"/>
             </div>
 
             <div class="form-group">
                 <label for="reciptNum">Recipt Number</label>
-                <input type="number" id="reciptNum" name="reciptNum" />
+                <input type="number" id="reciptNum" asp-for="reciptNum" />
             </div>
 
             <div class="form-group">
                 <label for="hasCollected">Prescription collected?</label>
-                <input type="checkbox" id="hasCollected" name="hasCollected" required />
+                <input type="checkbox" id="hasCollected" asp-for="hasCollected" required />
             </div>
 
             <div class="form-group">
                 <label for="collectionDate">Collection date</label>
-                <input type="date" id="collectionDate" name="collectionDate" />
+                <input type="date" id="collectionDate" asp-for="collectionDate" required/>
             </div>
 
             <button type="submit" id="loginButton">Enter</button>
