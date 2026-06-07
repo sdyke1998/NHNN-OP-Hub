@@ -223,6 +223,8 @@ C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\NHN
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\NHNN OP Hub.genruntimeconfig.cache
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\ref\NHNN OP Hub.dll
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\mv6qd2oh8p-{0}-5p0h5zkya9-5p0h5zkya9.gz
-C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\h31qqz93gu-{0}-f3mtlvn24w-f3mtlvn24w.gz
-C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\8e2cyfam7b-{0}-f3mtlvn24w-f3mtlvn24w.gz
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\scopedcss\Pages\Shared\_MainLayout.cshtml.rz.scp.css
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\scopedcss\Pages\Home.cshtml.rz.scp.css
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\h31qqz93gu-{0}-j3l1ycqn7e-j3l1ycqn7e.gz
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\8e2cyfam7b-{0}-j3l1ycqn7e-j3l1ycqn7e.gz

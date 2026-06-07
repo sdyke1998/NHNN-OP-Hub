@@ -9,41 +9,37 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/NHNN OP Hub.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
-       
-    </header>
+<body class="app-container">
 
-    <nav>
-        <div class="app-title">
-            <p>NHNN Outpatients Hub</p>
-        </div>
 
-        <ul>
-            <li>
-                <a class="nav-link" href="">
-                    <p class="link-title">Posting</p>
+    <nav class="sidebar">
+        <a asp-page="/Home">
+            <div class="app-title">
+                <p>NHNN Outpatients Hub</p>
+            </div>
+        </a>
+
+        <ul class="sidebar-nav">
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/Posting">
+                    Posting
                     <span class="nav-noti">0</span>
                 </a>
             </li>
-            <li>
-                <a class="nav-link" href="">
-                    <p class="link-title">Outpatients</p>
+            <li class="nav-item">
+                <a class="nav-link" asp-page="/Outpatients">
+                    Outpatients
                     <span class="nav-noti">0</span>
                 </a>
             </li>
         </ul>
     </nav>
 
-    <div class="container">
-        <main role="main" class="pb-3">
+    
+        <main role="main" class="main-content">
             @RenderBody()
         </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        
-    </footer>
+    
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

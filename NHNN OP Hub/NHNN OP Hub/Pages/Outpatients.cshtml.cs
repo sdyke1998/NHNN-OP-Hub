@@ -49,7 +49,7 @@ namespace NHNN_OP_Hub.Pages
         [BindProperty]
         public DateOnly collectionDate { get; set; } = DateOnly.FromDateTime(DateTime.Now.AddDays(7));
 
-
+        //On start-up, display all records added within the last 24hrs
         public void OnGet()
         {
             PackagesToDisplay = dbContext.PatientPackages.OfType<OutpatientPackage>()

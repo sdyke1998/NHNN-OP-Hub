@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using NHNN_OP_Hub.Data;
 
@@ -19,9 +20,14 @@ namespace NHNN_OP_Hub
                 });
 
             // Add services to the container.
-            builder.Services.AddRazorPages();
+            builder.Services.AddRazorPages(options =>
+            {
+                options.Conventions.AddPageRoute("/Home", "");
+            });
+
             builder.Services.AddDbContext<PatientPackageDbContext>();
             builder.Services.AddDbContext<UserDbContext>();
+            builder.Services.AddSingleton<Notifications>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

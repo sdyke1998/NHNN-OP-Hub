@@ -1,32 +1,15 @@
 ﻿@page
 @model NHNN_OP_Hub.Pages.HomeModel
 @{
+    Layout = "~/Pages/Shared/_MainLayout.cshtml";
 }
 
-<div class="page">
+<div class="main-content">
+    <h1>Welcome!</h1>
+    <h5>Please navigate using the menu on the right</h5>
 
-    <div class="top-bar">
-
-    </div>
-
-    <div class="sidebar">
-
-    </div>
-
-    <div class="main-content">
-        <div class="notification-bar">
-            <div class="noficication-card">
-
-            </div>
-        </div>
-        <div class="links">
-            <button>Outpatients</button>
-            <button>Posting</button>
-        </div>
-    </div>
-
-    <div class="bottom-bar">
-
-    </div>
-
+    <p>
+        There are <span class="noti-num">@Model.AppNotifications.Posting</span> notifications for posting and
+        <span class="noti-num">@Model.AppNotifications.Outpatient</span> notifications for outpatients.
+    </p>
 </div>
