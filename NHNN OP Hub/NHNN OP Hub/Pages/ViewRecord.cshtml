@@ -1,0 +1,89 @@
+﻿@page
+@model NHNN_OP_Hub.Pages.ViewRecordModel
+@{
+    Layout = null;
+}
+
+<div class="view-package">
+
+</div>
+
+<div class="package-history">
+
+</div>
+
+<div class="edit-form">
+    <form id="pt-edit" method="POST" asp-page-handler="Edit">
+
+        <div class="form-group">
+            <label for="ptName">Patient Name</label>
+            <input type="text" id="ptName" asp-for="ptName" />
+        </div>
+
+        <div class="form-group">
+            <label for="MRN">MRN</label>
+            <input type="text" id="MRN" asp-for="MRN" />
+        </div>
+
+        <div class="form-group">
+            <label for="ticketNum">Ticket Number</label>
+            <input type="number" id="ticketNum" asp-for="ticketNum" />
+        </div>
+
+        <div class="form-group">
+            <label for="isPaying">Is paying</label>
+            <input type="checkbox" id="isPaying" asp-for="isPaying" />
+        </div>
+
+        <div class="form-group">
+            <label for="isPrivate">Private prescription</label>
+            <input type="checkbox" id="isPrivate" asp-for="isPrivate" />
+        </div>
+
+        <div class="form-group">
+            <label for="rxCost">Prescription Cost</label>
+            <input type="number" id="rxCost" asp-for="rxCost" />
+        </div>
+
+        <div class="form-group">
+            <label for="reciptNum">Recipt Number</label>
+            <input type="number" id="reciptNum" asp-for="reciptNum" />
+        </div>
+
+        <div class="form-group">
+            <label for="hasCollected">Prescription collected?</label>
+            <input type="checkbox" id="hasCollected" asp-for="hasCollected" />
+        </div>
+
+        <div class="form-group">
+            <label for="collectionDate">Collection date</label>
+            <input type="date" id="collectionDate" asp-for="collectionDate" />
+        </div>
+
+        <div class="form-group">
+            <label for="trackingNumber">Tracking number</label>
+            <input type="text" id="trackingNumber" asp-for="trackingNumber" />
+        </div>
+
+        <div class="form-group">
+            <label for="hasReturned">Has the package returned?</label>
+            <input type="checkbox" id="hasReturned" asp-for="hasReturned" />
+        </div>
+
+        <div class="form-group">
+            <label for="deliveryAddress">Delivery address</label>
+            <input type="text" id="deliveryAddress" asp-for="deliveryAddress" />
+        </div>
+
+        <div class="form-reset">
+            <label for="reset">Reset</label>
+            <input type="reset" id="reset" />
+        </div>
+
+        <div class="form-type">
+            <select asp-for="editType" asp-items="Html.GetEnumSelectList<EditType>()"><</select>
+        </div>
+
+        <button type="submit" id="submitButton">Enter</button>
+    </form>
+</div>
