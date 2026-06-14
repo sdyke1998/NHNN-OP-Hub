@@ -2,16 +2,12 @@
 using NHNN_OP_Hub.Data;
 using System.Collections;
 using System.Diagnostics.Contracts;
+using static NHNN_OP_Hub.Pages.EditType;
 
 namespace NHNN_OP_Hub.Models
 {
     public class PackageChange
     {
-        /*
-         * The history of a package should be immutable. If someone needs to make a change to a patient's record, this must be done by creating further changes to undo what was done before.
-         * 
-         * Every change will be documented in a way not dissimilar to how The Epic EHRS handles audit trails.
-         */
 
         private readonly DateTime Timestamp;
         private readonly List<string> FieldNames;
@@ -28,6 +24,19 @@ namespace NHNN_OP_Hub.Models
             this.FieldValues = _FieldValues;
         }
 
+        //This may be called after DbContext.SaveChanges() is called
+        public static PackageChange PackageChangedTo(NHNN_OP_Hub.Pages.EditType packageType)
+        {
+            string _FieldName = "Package changed to ";
+            string _FieldValue;
+
+            if (packageType == NHNN_OP_Hub.Pages.EditType.OUTPATIENT) _FieldValue = "outpatient package.";
+            else _FieldValue = "posting package.";
+
+            return new PackageChange(DateTime.Now, new List<string> { _FieldName }, new List<string> { _FieldValue });
+        }
+
+        //This must be called before DbContext.SaveChanges() is called
         public static PackageChange GetPackageChange(PatientPackage package, PatientPackageDbContext dbContext)
         {
             List<string> _FieldNames = new List<string>();
@@ -60,6 +69,7 @@ namespace NHNN_OP_Hub.Models
         }
     }
 
+    [Owned]//This annotator lets EF know that this class will be owned by each PatientPackage
     public class PackageHistory : IEnumerable
     {
         private List<PackageChange> Changes;

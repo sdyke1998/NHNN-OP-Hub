@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.CompilerServices;
 
@@ -15,6 +16,7 @@ namespace NHNN_OP_Hub.Models
         public bool IsPrivate { get; set; }
         public float RxCost { get; set; }
         public int? ReciptNumber { get; set; }
+        public PackageHistory History { get; set; }
     }
 
     public class PostingPackage : PatientPackage

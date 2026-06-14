@@ -113,10 +113,11 @@ namespace NHNN_OP_Hub.Pages
                 DeliveryAddress = ""
             };
 
+            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
+            //newPostingPackage.History += PackageChangedTo(Edit.POSTING);
+
             dbContext.PatientPackages.Remove(PackageToView);
             dbContext.PatientPackages.Add(newPostingPackage);
-            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
-            //PackageToView.PackageHistory += GetPackageChange(PackageToView, dbContext);
 
             dbContext.SaveChanges();
             PackageToView = dbContext.PatientPackages.Find(workRequestID);
@@ -145,11 +146,11 @@ namespace NHNN_OP_Hub.Pages
                 HasCollected = false
             };
 
+            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
+            //newOutpatientPackage.History += PackageChangedTo(Edit.OUTPATIENT);
+
             dbContext.PatientPackages.Remove(PackageToView);
             dbContext.PatientPackages.Add(newOutpatientPackage);
-
-            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
-            //PackageToView.PackageHistory += GetPackageChange(PackageToView, dbContext);
 
             dbContext.SaveChanges();
             PackageToView = dbContext.PatientPackages.Find(workRequestID);
@@ -182,7 +183,7 @@ namespace NHNN_OP_Hub.Pages
             }
 
             /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
-            //PackageToView.PackageHistory += GetPackageChange(PackageToView, dbContext);
+            //PackageToView.History += GetPackageChange(PackageToView, dbContext);
 
             dbContext.SaveChanges();
         }

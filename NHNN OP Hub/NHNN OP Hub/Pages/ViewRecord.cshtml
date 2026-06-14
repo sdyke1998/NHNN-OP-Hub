@@ -122,5 +122,20 @@
 
 <script>
 
+    document.querySelectorAll('.form-group').forEach(function (group) {
+
+        const stageCheckbox = group.querySelector('input[name*="stage"]');
+
+        const mainInput = group.querySelector('input:not([name*="stage"])');
+
+        if (mainInput && stageCheckbox) {
+
+            const eventType = (mainInput.type === 'checkbox') ? 'change' : 'input';
+
+            mainInput.addEventListener(eventType, function () {
+                stageCheckbox.checked = true;
+            });
+        }
+    });
 
 </script>
