@@ -90,7 +90,7 @@ namespace NHNN_OP_Hub.Pages
                 DateDispensed = DateTime.Now,
                 IsPaying = isPaying,
                 IsPrivate = isPrivate,
-                RxCost = rxCost,
+                RxCost = rxCost ?? 0,
                 ReciptNumber = reciptNum,
                 TicketNumber = ticketNum,
                 CollectionDate = collectionDate,

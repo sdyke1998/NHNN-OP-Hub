@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\pages\\viewrecord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\pages\\viewrecord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\pages\\viewrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\pages\\viewrecord.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\pages\\outpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\pages\\outpatients.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\models\\packagehx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\models\\packagehx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\models\\patientpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\models\\patientpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\pages\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|c:\\users\\sd199\\desktop\\nhnn op hub\\nhnn op hub\\nhnn op hub\\pages\\viewrecord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{283C0CBD-B79B-C747-1D7E-97E9CF5A8252}|NHNN OP Hub\\NHNN OP Hub.csproj|solutionrelative:nhnn op hub\\pages\\viewrecord.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,84 +21,52 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 724,
-          "SelectedChildIndex": 2,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Home.cshtml",
-              "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\Home.cshtml",
-              "RelativeDocumentMoniker": "NHNN OP Hub\\Pages\\Home.cshtml",
-              "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\Home.cshtml",
-              "RelativeToolTip": "NHNN OP Hub\\Pages\\Home.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-07T19:44:42.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PatientPackage.cs",
-              "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Models\\PatientPackage.cs",
-              "RelativeDocumentMoniker": "NHNN OP Hub\\Models\\PatientPackage.cs",
-              "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Models\\PatientPackage.cs",
-              "RelativeToolTip": "NHNN OP Hub\\Models\\PatientPackage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T19:13:19.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Outpatients.cshtml",
-              "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\Outpatients.cshtml",
-              "RelativeDocumentMoniker": "NHNN OP Hub\\Pages\\Outpatients.cshtml",
-              "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\Outpatients.cshtml",
-              "RelativeToolTip": "NHNN OP Hub\\Pages\\Outpatients.cshtml",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-10T18:40:21.05Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 787,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ViewRecord.cshtml",
-              "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\ViewRecord.cshtml",
-              "RelativeDocumentMoniker": "NHNN OP Hub\\Pages\\ViewRecord.cshtml",
-              "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\ViewRecord.cshtml",
-              "RelativeToolTip": "NHNN OP Hub\\Pages\\ViewRecord.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-06-10T18:31:47.807Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 611,
+          "DockedWidth": 818,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PackageHx.cs",
+              "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Models\\PackageHx.cs",
+              "RelativeDocumentMoniker": "NHNN OP Hub\\Models\\PackageHx.cs",
+              "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Models\\PackageHx.cs",
+              "RelativeToolTip": "NHNN OP Hub\\Models\\PackageHx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T10:44:24.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientPackage.cs",
+              "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Models\\PatientPackage.cs",
+              "RelativeDocumentMoniker": "NHNN OP Hub\\Models\\PatientPackage.cs",
+              "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Models\\PatientPackage.cs",
+              "RelativeToolTip": "NHNN OP Hub\\Models\\PatientPackage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-14T10:22:11.207Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 904,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ViewRecord.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\ViewRecord.cshtml.cs",
               "RelativeDocumentMoniker": "NHNN OP Hub\\Pages\\ViewRecord.cshtml.cs",
               "ToolTip": "C:\\Users\\sd199\\Desktop\\NHNN OP Hub\\NHNN OP Hub\\NHNN OP Hub\\Pages\\ViewRecord.cshtml.cs",
               "RelativeToolTip": "NHNN OP Hub\\Pages\\ViewRecord.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T18:33:41.52Z",
+              "WhenOpened": "2026-06-14T12:26:50.483Z",
               "EditorCaption": ""
             }
           ]

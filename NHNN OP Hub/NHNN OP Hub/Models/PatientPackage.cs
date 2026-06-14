@@ -13,7 +13,7 @@ namespace NHNN_OP_Hub.Models
         public DateTime DateDispensed { get; set; }
         public bool IsPaying { get; set; }
         public bool IsPrivate { get; set; }
-        public float? RxCost { get; set; }
+        public float RxCost { get; set; }
         public int? ReciptNumber { get; set; }
     }
 

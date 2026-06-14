@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NHNN OP Hub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2c58e752bb3aeb89910c4b3b900f6e39979b8530")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97d3f108af1fd36177a3f717a22859ffb0a9d7c1")]
 [assembly: System.Reflection.AssemblyProductAttribute("NHNN OP Hub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NHNN_OP_Hub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
