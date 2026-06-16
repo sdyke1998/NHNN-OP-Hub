@@ -4,6 +4,8 @@
     Layout = "~/Pages/Shared/_MainLayout.cshtml";
 }
 
+<h1 class="main-title">Outpatients</h1>
+
 <div class="main-body">
 
     <div class="search-db">
@@ -52,7 +54,7 @@
                 @{
                     @foreach (var pt in Model.PackagesToDisplay)
                     {
-                        <tr>
+                        <tr class="pt-data-row">
                             <td>@pt.WorkRequestID</td>
                             <td>@pt.Name</td>
                             <td>@pt.MRN</td>
@@ -72,6 +74,8 @@
         </table>
     </div>
     </div>
+
+    <h3 class="add-op-title">Add an outpatient package below</h3>
 
     <div class="pt-entry-form">
     <form id="pt-entry" method="POST" asp-page-handler="Enter">

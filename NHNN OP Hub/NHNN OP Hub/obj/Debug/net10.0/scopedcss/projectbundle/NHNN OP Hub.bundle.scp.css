@@ -48,6 +48,367 @@
     margin-top: 10px;
     transition: background-color 0.2s;
 }
+/* /Pages/Outpatients.cshtml.rz.scp.css */
+/* ============================================================
+   NHNN Outpatients Hub — Outpatients.css
+   Colour palette:
+     --uclh-teal   #278D93  (Your exact corporate brand teal color)
+     --teal-dark   #1d2b39  (top nav bar)
+     --teal-mid    Mapped to your custom UCLH Teal
+     --teal-light  #e6f4f5  (soft hover tints, row highlights)
+     --white       #ffffff
+     --bg-subtle   #f4f7f9  (page & input backgrounds)
+     --border      #d1d5db
+     --text-dark   #2d3748
+     --text-muted  #6b7280
+============================================================ */
+
+:root[b-83bmtpmnkj] {
+    /* 1. Added your exact brand color variable */
+    --uclh-teal: #278D93;
+    --uclh-teal-hover: #1f7277;
+    --uclh-teal-light: #e6f4f5;
+    --teal-dark: #1d2b39;
+    /* 2. Dynamically map the project's mid-teal to your brand color */
+    --teal-mid: var(--uclh-teal);
+    --teal-hover: var(--uclh-teal-hover);
+    --teal-light: var(--uclh-teal-light);
+    --white: #ffffff;
+    --bg-subtle: #f4f7f9;
+    --border: #d1d5db;
+    --text-dark: #2d3748;
+    --text-muted: #6b7280;
+    --radius: 6px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+/* ── Base ────────────────────────────────────────────────── */
+
+body[b-83bmtpmnkj] {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-subtle);
+    margin: 0;
+}
+
+/* ── Main body wrapper ───────────────────────────────────── */
+
+.main-body[b-83bmtpmnkj] {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* ── Section labels (shared pseudo-element pattern) ──────── */
+
+.search-db[b-83bmtpmnkj],
+.pt-table[b-83bmtpmnkj],
+.pt-entry-form[b-83bmtpmnkj] {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ── Search section ──────────────────────────────────────── */
+
+.search-db[b-83bmtpmnkj] {
+    padding: 1.25rem 1.5rem;
+    /* 3. Constrain the search panel so it doesn't stretch infinitely on wide monitors */
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#search-form[b-83bmtpmnkj] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.25rem;
+}
+
+.search-group[b-83bmtpmnkj] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+    .search-group label[b-83bmtpmnkj] {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    .search-group input[b-83bmtpmnkj] {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0.45rem 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        background: var(--bg-subtle);
+        /* 4. Keep inputs at a professional, compact width */
+        width: 220px;
+        box-sizing: border-box;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+        .search-group input:focus[b-83bmtpmnkj] {
+            outline: none;
+            border-color: var(--teal-mid);
+            box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
+            background: var(--white);
+        }
+
+/* Search buttons */
+
+#search-form button[b-83bmtpmnkj] {
+    padding: 0.47rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+#searchButton[b-83bmtpmnkj] {
+    background: var(--teal-mid);
+    color: var(--white);
+    border: 1px solid var(--teal-mid);
+}
+
+    #searchButton:hover[b-83bmtpmnkj] {
+        background: var(--teal-hover);
+        border-color: var(--teal-hover);
+    }
+
+#search-form button:not(#searchButton)[b-83bmtpmnkj] {
+    background: var(--white);
+    color: var(--text-dark);
+    border: 1px solid var(--border);
+}
+
+    #search-form button:not(#searchButton):hover[b-83bmtpmnkj] {
+        background: var(--bg-subtle);
+        border-color: #adb5bd;
+    }
+
+/* ── Patient table ───────────────────────────────────────── */
+
+.pt-table[b-83bmtpmnkj] {
+    overflow-x: auto;
+}
+
+    .pt-table table[b-83bmtpmnkj] {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+    }
+
+    /* 5. Colored explicitly with your corporate brand variable */
+    .pt-table thead tr[b-83bmtpmnkj] {
+        background: var(--uclh-teal);
+        color: var(--white);
+    }
+
+    .pt-table th[b-83bmtpmnkj] {
+        padding: 0.8rem 1rem;
+        text-align: left;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+    }
+
+    .pt-table td[b-83bmtpmnkj] {
+        padding: 0.7rem 1rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-dark);
+        white-space: nowrap;
+    }
+
+    .pt-table tbody tr:last-child td[b-83bmtpmnkj] {
+        border-bottom: none;
+    }
+
+    .pt-table tbody tr:nth-child(even)[b-83bmtpmnkj] {
+        background: var(--white);
+    }
+
+    .pt-table tbody tr:nth-child(odd)[b-83bmtpmnkj] {
+        background: var(--bg-subtle);
+    }
+
+    .pt-table tbody tr:hover[b-83bmtpmnkj] {
+        background: var(--teal-light);
+        transition: background 0.1s;
+    }
+
+/* ── Patient entry form ──────────────────────────────────── */
+
+.add-op-title[b-83bmtpmnkj] {
+    margin: 1.5rem 2rem 0.5rem;
+    color: var(--text-dark);
+    font-size: 1.25rem;
+}
+
+.pt-entry-form[b-83bmtpmnkj] {
+    padding: 1.75rem;
+    margin: 0 2rem 2rem;
+    /* 6. Enforce a clean maximum width to prevent full-screen layout stretching */
+    max-width: 750px;
+    box-sizing: border-box;
+}
+
+#pt-entry[b-83bmtpmnkj] {
+    display: grid;
+    /* 7. Grid columns configuration with automatic wrapping */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem 1.5rem;
+    align-items: end;
+}
+
+.form-group[b-83bmtpmnkj] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+    .form-group label[b-83bmtpmnkj] {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    .form-group input[type="text"][b-83bmtpmnkj],
+    .form-group input[type="number"][b-83bmtpmnkj],
+    .form-group input[type="date"][b-83bmtpmnkj] {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        background: var(--bg-subtle);
+        width: 100%;
+        box-sizing: border-box;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+        .form-group input[type="text"]:focus[b-83bmtpmnkj],
+        .form-group input[type="number"]:focus[b-83bmtpmnkj],
+        .form-group input[type="date"]:focus[b-83bmtpmnkj] {
+            outline: none;
+            border-color: var(--teal-mid);
+            box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
+            background: var(--white);
+        }
+
+    /* Checkboxes alignment baseline */
+    .form-group:has(input[type="checkbox"])[b-83bmtpmnkj] {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .form-group input[type="checkbox"][b-83bmtpmnkj] {
+        width: 1.15rem;
+        height: 1.15rem;
+        accent-color: var(--teal-mid);
+        cursor: pointer;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+/* Reset column alignment */
+.form-reset[b-83bmtpmnkj] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+    .form-reset label[b-83bmtpmnkj] {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    .form-reset input[type="reset"][b-83bmtpmnkj] {
+        padding: 0.5rem 1.25rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: var(--white);
+        color: var(--text-dark);
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+        transition: background 0.15s, border-color 0.15s;
+    }
+
+        .form-reset input[type="reset"]:hover[b-83bmtpmnkj] {
+            background: var(--bg-subtle);
+            border-color: #adb5bd;
+        }
+
+/* Submission action button */
+#loginButton[b-83bmtpmnkj] {
+    padding: 0.52rem 1.75rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--teal-mid);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.15s;
+}
+
+    #loginButton:hover[b-83bmtpmnkj] {
+        background: var(--teal-hover);
+    }
+
+/* ── Focus-visible ───────────────────────────────────────── */
+
+button:focus-visible[b-83bmtpmnkj],
+input:focus-visible[b-83bmtpmnkj] {
+    outline: 2px solid var(--teal-mid);
+    outline-offset: 2px;
+}
+
+/* ── Responsive breakpoints ──────────────────────────────── */
+
+@media (max-width: 768px) {
+    .main-body[b-83bmtpmnkj],
+    .pt-entry-form[b-83bmtpmnkj] {
+        padding: 1rem;
+        margin: 0 1rem 1rem;
+    }
+
+    #search-form[b-83bmtpmnkj] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-group input[b-83bmtpmnkj] {
+        width: 100%;
+    }
+
+    #pt-entry[b-83bmtpmnkj] {
+        grid-template-columns: 1fr;
+    }
+}
 /* /Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

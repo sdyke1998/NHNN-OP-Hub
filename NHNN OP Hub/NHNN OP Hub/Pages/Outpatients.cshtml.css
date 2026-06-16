@@ -1,55 +1,4 @@
-/* /Pages/Home.cshtml.rz.scp.css */
-.noti-num[b-6pce1wagw6] {
-    color: var(--uclh-teal);
-}
-/* /Pages/Login.cshtml.rz.scp.css */
-
-
-.title[b-9frygalbvd]{
-    text-align: center;
-    color: var(--uclh-teal);
-}
-
-.centre[b-9frygalbvd]{
-    background-color: white;
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.form-group[b-9frygalbvd]{
-    margin-bottom: 20px;
-}
-
-.form-group label[b-9frygalbvd] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #cbd5e0; /*May change colour*/
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
-    outline: none;
-    transition: border-color 0.2s;
-}
-.form-group input:focus[b-9frygalbvd] {
-    border-color: #a0aec0;
-}
-
-.btn-submit[b-9frygalbvd] {
-    width: 100%;
-    background-color: var(--uclh-teal);
-    color: white;
-    padding: 14px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.2s;
-}
-/* /Pages/Outpatients.cshtml.rz.scp.css */
-/* ============================================================
+﻿/* ============================================================
    NHNN Outpatients Hub — Outpatients.css
    Colour palette:
      --uclh-teal   #278D93  (Your exact corporate brand teal color)
@@ -63,7 +12,7 @@
      --text-muted  #6b7280
 ============================================================ */
 
-:root[b-83bmtpmnkj] {
+:root {
     /* 1. Added your exact brand color variable */
     --uclh-teal: #278D93;
     --uclh-teal-hover: #1f7277;
@@ -85,7 +34,7 @@
 
 /* ── Base ────────────────────────────────────────────────── */
 
-body[b-83bmtpmnkj] {
+body {
     font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     color: var(--text-dark);
     background: var(--bg-subtle);
@@ -94,7 +43,7 @@ body[b-83bmtpmnkj] {
 
 /* ── Main body wrapper ───────────────────────────────────── */
 
-.main-body[b-83bmtpmnkj] {
+.main-body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -103,9 +52,9 @@ body[b-83bmtpmnkj] {
 
 /* ── Section labels (shared pseudo-element pattern) ──────── */
 
-.search-db[b-83bmtpmnkj],
-.pt-table[b-83bmtpmnkj],
-.pt-entry-form[b-83bmtpmnkj] {
+.search-db,
+.pt-table,
+.pt-entry-form {
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -114,7 +63,7 @@ body[b-83bmtpmnkj] {
 
 /* ── Search section ──────────────────────────────────────── */
 
-.search-db[b-83bmtpmnkj] {
+.search-db {
     padding: 1.25rem 1.5rem;
     /* 3. Constrain the search panel so it doesn't stretch infinitely on wide monitors */
     max-width: 900px;
@@ -122,20 +71,20 @@ body[b-83bmtpmnkj] {
     box-sizing: border-box;
 }
 
-#search-form[b-83bmtpmnkj] {
+#search-form {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
     gap: 1.25rem;
 }
 
-.search-group[b-83bmtpmnkj] {
+.search-group {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
 }
 
-    .search-group label[b-83bmtpmnkj] {
+    .search-group label {
         font-size: 0.75rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -143,7 +92,7 @@ body[b-83bmtpmnkj] {
         color: var(--text-muted);
     }
 
-    .search-group input[b-83bmtpmnkj] {
+    .search-group input {
         border: 1px solid var(--border);
         border-radius: var(--radius);
         padding: 0.45rem 0.75rem;
@@ -156,7 +105,7 @@ body[b-83bmtpmnkj] {
         transition: border-color 0.15s, box-shadow 0.15s;
     }
 
-        .search-group input:focus[b-83bmtpmnkj] {
+        .search-group input:focus {
             outline: none;
             border-color: var(--teal-mid);
             box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
@@ -165,7 +114,7 @@ body[b-83bmtpmnkj] {
 
 /* Search buttons */
 
-#search-form button[b-83bmtpmnkj] {
+#search-form button {
     padding: 0.47rem 1.5rem;
     border-radius: var(--radius);
     font-size: 0.875rem;
@@ -174,47 +123,47 @@ body[b-83bmtpmnkj] {
     transition: background 0.15s, border-color 0.15s;
 }
 
-#searchButton[b-83bmtpmnkj] {
+#searchButton {
     background: var(--teal-mid);
     color: var(--white);
     border: 1px solid var(--teal-mid);
 }
 
-    #searchButton:hover[b-83bmtpmnkj] {
+    #searchButton:hover {
         background: var(--teal-hover);
         border-color: var(--teal-hover);
     }
 
-#search-form button:not(#searchButton)[b-83bmtpmnkj] {
+#search-form button:not(#searchButton) {
     background: var(--white);
     color: var(--text-dark);
     border: 1px solid var(--border);
 }
 
-    #search-form button:not(#searchButton):hover[b-83bmtpmnkj] {
+    #search-form button:not(#searchButton):hover {
         background: var(--bg-subtle);
         border-color: #adb5bd;
     }
 
 /* ── Patient table ───────────────────────────────────────── */
 
-.pt-table[b-83bmtpmnkj] {
+.pt-table {
     overflow-x: auto;
 }
 
-    .pt-table table[b-83bmtpmnkj] {
+    .pt-table table {
         width: 100%;
         border-collapse: collapse;
         font-size: 0.875rem;
     }
 
     /* 5. Colored explicitly with your corporate brand variable */
-    .pt-table thead tr[b-83bmtpmnkj] {
+    .pt-table thead tr {
         background: var(--uclh-teal);
         color: var(--white);
     }
 
-    .pt-table th[b-83bmtpmnkj] {
+    .pt-table th {
         padding: 0.8rem 1rem;
         text-align: left;
         font-size: 0.75rem;
@@ -224,39 +173,39 @@ body[b-83bmtpmnkj] {
         white-space: nowrap;
     }
 
-    .pt-table td[b-83bmtpmnkj] {
+    .pt-table td {
         padding: 0.7rem 1rem;
         border-bottom: 1px solid var(--border);
         color: var(--text-dark);
         white-space: nowrap;
     }
 
-    .pt-table tbody tr:last-child td[b-83bmtpmnkj] {
+    .pt-table tbody tr:last-child td {
         border-bottom: none;
     }
 
-    .pt-table tbody tr:nth-child(even)[b-83bmtpmnkj] {
+    .pt-table tbody tr:nth-child(even) {
         background: var(--white);
     }
 
-    .pt-table tbody tr:nth-child(odd)[b-83bmtpmnkj] {
+    .pt-table tbody tr:nth-child(odd) {
         background: var(--bg-subtle);
     }
 
-    .pt-table tbody tr:hover[b-83bmtpmnkj] {
+    .pt-table tbody tr:hover {
         background: var(--teal-light);
         transition: background 0.1s;
     }
 
 /* ── Patient entry form ──────────────────────────────────── */
 
-.add-op-title[b-83bmtpmnkj] {
+.add-op-title {
     margin: 1.5rem 2rem 0.5rem;
     color: var(--text-dark);
     font-size: 1.25rem;
 }
 
-.pt-entry-form[b-83bmtpmnkj] {
+.pt-entry-form {
     padding: 1.75rem;
     margin: 0 2rem 2rem;
     /* 6. Enforce a clean maximum width to prevent full-screen layout stretching */
@@ -264,7 +213,7 @@ body[b-83bmtpmnkj] {
     box-sizing: border-box;
 }
 
-#pt-entry[b-83bmtpmnkj] {
+#pt-entry {
     display: grid;
     /* 7. Grid columns configuration with automatic wrapping */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -272,13 +221,13 @@ body[b-83bmtpmnkj] {
     align-items: end;
 }
 
-.form-group[b-83bmtpmnkj] {
+.form-group {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
 }
 
-    .form-group label[b-83bmtpmnkj] {
+    .form-group label {
         font-size: 0.75rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -286,9 +235,9 @@ body[b-83bmtpmnkj] {
         color: var(--text-muted);
     }
 
-    .form-group input[type="text"][b-83bmtpmnkj],
-    .form-group input[type="number"][b-83bmtpmnkj],
-    .form-group input[type="date"][b-83bmtpmnkj] {
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="date"] {
         border: 1px solid var(--border);
         border-radius: var(--radius);
         padding: 0.5rem 0.75rem;
@@ -300,9 +249,9 @@ body[b-83bmtpmnkj] {
         transition: border-color 0.15s, box-shadow 0.15s;
     }
 
-        .form-group input[type="text"]:focus[b-83bmtpmnkj],
-        .form-group input[type="number"]:focus[b-83bmtpmnkj],
-        .form-group input[type="date"]:focus[b-83bmtpmnkj] {
+        .form-group input[type="text"]:focus,
+        .form-group input[type="number"]:focus,
+        .form-group input[type="date"]:focus {
             outline: none;
             border-color: var(--teal-mid);
             box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
@@ -310,14 +259,14 @@ body[b-83bmtpmnkj] {
         }
 
     /* Checkboxes alignment baseline */
-    .form-group:has(input[type="checkbox"])[b-83bmtpmnkj] {
+    .form-group:has(input[type="checkbox"]) {
         flex-direction: row;
         align-items: center;
         gap: 0.6rem;
         padding-bottom: 0.6rem;
     }
 
-    .form-group input[type="checkbox"][b-83bmtpmnkj] {
+    .form-group input[type="checkbox"] {
         width: 1.15rem;
         height: 1.15rem;
         accent-color: var(--teal-mid);
@@ -327,13 +276,13 @@ body[b-83bmtpmnkj] {
     }
 
 /* Reset column alignment */
-.form-reset[b-83bmtpmnkj] {
+.form-reset {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
 }
 
-    .form-reset label[b-83bmtpmnkj] {
+    .form-reset label {
         font-size: 0.75rem;
         font-weight: 600;
         text-transform: uppercase;
@@ -341,7 +290,7 @@ body[b-83bmtpmnkj] {
         color: var(--text-muted);
     }
 
-    .form-reset input[type="reset"][b-83bmtpmnkj] {
+    .form-reset input[type="reset"] {
         padding: 0.5rem 1.25rem;
         border-radius: var(--radius);
         border: 1px solid var(--border);
@@ -355,13 +304,13 @@ body[b-83bmtpmnkj] {
         transition: background 0.15s, border-color 0.15s;
     }
 
-        .form-reset input[type="reset"]:hover[b-83bmtpmnkj] {
+        .form-reset input[type="reset"]:hover {
             background: var(--bg-subtle);
             border-color: #adb5bd;
         }
 
 /* Submission action button */
-#loginButton[b-83bmtpmnkj] {
+#loginButton {
     padding: 0.52rem 1.75rem;
     border: none;
     border-radius: var(--radius);
@@ -375,14 +324,14 @@ body[b-83bmtpmnkj] {
     transition: background 0.15s;
 }
 
-    #loginButton:hover[b-83bmtpmnkj] {
+    #loginButton:hover {
         background: var(--teal-hover);
     }
 
 /* ── Focus-visible ───────────────────────────────────────── */
 
-button:focus-visible[b-83bmtpmnkj],
-input:focus-visible[b-83bmtpmnkj] {
+button:focus-visible,
+input:focus-visible {
     outline: 2px solid var(--teal-mid);
     outline-offset: 2px;
 }
@@ -390,147 +339,22 @@ input:focus-visible[b-83bmtpmnkj] {
 /* ── Responsive breakpoints ──────────────────────────────── */
 
 @media (max-width: 768px) {
-    .main-body[b-83bmtpmnkj],
-    .pt-entry-form[b-83bmtpmnkj] {
+    .main-body,
+    .pt-entry-form {
         padding: 1rem;
         margin: 0 1rem 1rem;
     }
 
-    #search-form[b-83bmtpmnkj] {
+    #search-form {
         flex-direction: column;
         align-items: stretch;
     }
 
-    .search-group input[b-83bmtpmnkj] {
+    .search-group input {
         width: 100%;
     }
 
-    #pt-entry[b-83bmtpmnkj] {
+    #pt-entry {
         grid-template-columns: 1fr;
     }
-}
-/* /Pages/Shared/_Layout.cshtml.rz.scp.css */
-/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand[b-qb84yq8za6] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-a[b-qb84yq8za6] {
-  color: #0077cc;
-}
-
-.btn-primary[b-qb84yq8za6] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active[b-qb84yq8za6], .nav-pills .show > .nav-link[b-qb84yq8za6] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.border-top[b-qb84yq8za6] {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom[b-qb84yq8za6] {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow[b-qb84yq8za6] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy[b-qb84yq8za6] {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-.footer[b-qb84yq8za6] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
-}
-/* /Pages/Shared/_MainLayout.cshtml.rz.scp.css */
-.app-container[b-zvh2a1e6t4] {
-    
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.sidebar[b-zvh2a1e6t4] {
-    width: 250px;
-    background-color: var(--uclh-teal);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100vh;
-    z-index: 1000;
-}
-
-.app-title p[b-zvh2a1e6t4] {
-    padding: 15px 20px;
-    font-size: 1.25rem;
-    background-color: var(--uclh-teal);
-    filter: brightness(75%);
-}
-
-.sidebar-nav[b-zvh2a1e6t4] {
-    list-style: none;
-    padding: 15px 10px;
-    margin: 0;
-}
-
-.sidebar-nav .nav-item[b-zvh2a1e6t4] {
-    margin-bottom: 5px;
-}
-
-.sidebar-nav .nav-link[b-zvh2a1e6t4] {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 5px;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
-}
-
-.sidebar-nav .link-content[b-zvh2a1e6t4] {
-    display: flex;
-    align-items: center;
-}
-
-.sidebar-nav .nav-link:hover[b-zvh2a1e6t4],
-.sidebar-nav .nav-link.active[b-zvh2a1e6t4] {
-    background-color: #55878b; 
-}
-
-.nav-noti[b-zvh2a1e6t4] {
-    background-color: #ffffff;
-    color: #04575b;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 2px 8px;
-    border-radius: 12px;
-    margin-left: 10px;
-}
-
-
-.main-content[b-zvh2a1e6t4] {
-    margin-left: 250px;
-    padding: 30px;
-    background-color: #ffffff;
-    min-height: 100vh;
 }

@@ -69,10 +69,10 @@ namespace NHNN_OP_Hub.Models
         }
     }
 
-    [Owned]//This annotator lets EF know that this class will be owned by each PatientPackage
+    [Owned] //This annotator lets EF know that this class will be owned by each PatientPackage and will not create a primary key for objects of this type.
     public class PackageHistory : IEnumerable
     {
-        private List<PackageChange> Changes;
+        private List<PackageChange> Changes = new List<PackageChange>();
         public int Length => Changes.Count; //Lambda notation used as a shorthand for a getter with no setter.
 
         public IEnumerator GetEnumerator()

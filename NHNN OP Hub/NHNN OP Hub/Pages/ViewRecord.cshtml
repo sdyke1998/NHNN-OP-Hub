@@ -7,7 +7,34 @@
 <div class="view-package">
 
     <div class="package-to-view">
+        <table>
 
+            <thead>
+                <tr>
+                    <th>Work request ID</th>
+                    <th>Name</th>
+                    <th>MRN</th>
+                    <th>Date dispensed</th>
+                    <th>Is paying?</th>
+                    <th>Is private?</th>
+                    <th>Prescription cost</th>
+                    <th>Recipt number</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="pt-data-row">
+                    <td>@Model.PackageToView.WorkRequestID</td>
+                    <td>@Model.PackageToView.Name</td>
+                    <td>@Model.PackageToView.MRN</td>
+                    <td>@Model.PackageToView.DateDispensed</td>
+                    <td>@Model.PackageToView.IsPaying</td>
+                    <td>@Model.PackageToView.IsPrivate</td>
+                    <td>@Model.PackageToView.RxCost</td>
+                    <td>@Model.PackageToView.ReciptNumber</td>
+                </tr>
+            </tbody>
+
+        </table>
     </div>
 
     @if (Model.IsStagingChanges)
