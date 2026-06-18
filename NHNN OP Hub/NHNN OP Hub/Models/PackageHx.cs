@@ -55,6 +55,15 @@ namespace NHNN_OP_Hub.Models
             return new PackageChange(DateTime.Now, _FieldNames, _FieldValues);
         }
 
+        public static PackageChange Initial()
+        {
+            return new PackageChange(
+                DateTime.Now,
+                new List<string> {"Package created."},
+                new List<string> {""}
+            );
+        }
+
         public override string ToString()
         {
             string output = $"{Timestamp} : ";
@@ -62,7 +71,7 @@ namespace NHNN_OP_Hub.Models
             for(int i = 0; i < n_FieldsChanged; i++)
             {
                 output += $"{FieldNames[i]} was changed to {FieldValues[i]}.";
-                if (i + 1 != n_FieldsChanged) output += " ";
+                if (i - 1 != n_FieldsChanged) output += " ";
             }
 
             return output;
@@ -72,8 +81,14 @@ namespace NHNN_OP_Hub.Models
     [Owned] //This annotator lets EF know that this class will be owned by each PatientPackage and will not create a primary key for objects of this type.
     public class PackageHistory : IEnumerable
     {
-        private List<PackageChange> Changes = new List<PackageChange>();
+        private List<PackageChange> Changes;
         public int Length => Changes.Count; //Lambda notation used as a shorthand for a getter with no setter.
+
+        public PackageHistory()
+        {
+            Changes = new List<PackageChange>();
+            Changes.Add(PackageChange.Initial());
+        }
 
         public IEnumerator GetEnumerator()
         {

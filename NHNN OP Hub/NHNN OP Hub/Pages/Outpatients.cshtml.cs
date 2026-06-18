@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.IdentityModel.Tokens;
 using NHNN_OP_Hub.Data;
 using NHNN_OP_Hub.Models;
 
@@ -11,6 +12,8 @@ namespace NHNN_OP_Hub.Pages
     {
         private PatientPackageDbContext dbContext;
         public List<OutpatientPackage> PackagesToDisplay;
+        public string AddPatientErrorMessage;
+        public string SearchPatientErrorMessage;
         public OutpatientsModel(PatientPackageDbContext _dbContext)
         {
             this.dbContext = _dbContext;
@@ -41,7 +44,7 @@ namespace NHNN_OP_Hub.Pages
         [BindProperty]
         public bool isPrivate { get; set; } = false;
         [BindProperty]
-        public float? rxCost { get; set; } = null;
+        public float rxCost { get; set; } = 0; //Nullable type is not necessary since: pt not paying <=> they've spent £0 on the rx
         [BindProperty]
         public int? reciptNum { get; set; } = null;
         [BindProperty]
@@ -53,12 +56,14 @@ namespace NHNN_OP_Hub.Pages
         public void OnGet()
         {
             PackagesToDisplay = dbContext.PatientPackages.OfType<OutpatientPackage>()
-                .Where(op => op.DateDispensed >= DateTime.Now.AddHours(-24.0f))
+                .Where(op => op.DateDispensed >= DateTime.Now.AddHours(-24))
                     .OrderBy(op => op.DateDispensed).ToList<OutpatientPackage>();
         }
 
         public async Task<IActionResult> OnPostSearchAsync()
         {
+            SearchPatientErrorMessage = "";
+
             IQueryable<OutpatientPackage> op_pkg
                 = dbContext.PatientPackages.OfType<OutpatientPackage>();
 
@@ -77,29 +82,47 @@ namespace NHNN_OP_Hub.Pages
             PackagesToDisplay = op_pkg
                 .OrderBy(op => op.DateDispensed).ToList<OutpatientPackage>();
 
+            if (PackagesToDisplay.Count == 0) SearchPatientErrorMessage = "No patients were found.";
+
             return Page();
         }
 
         public async Task<IActionResult> OnPostEnterAsync()
         {
+            AddPatientErrorMessage = "";
             OutpatientPackage op_pkg = new OutpatientPackage
             {
-                WorkRequestID = -1, //This needs to be replaced with a true work request ID, otherwise EF will throw an exception
+                
                 Name = ptName,
                 MRN = this.MRN,
                 DateDispensed = DateTime.Now,
                 IsPaying = isPaying,
                 IsPrivate = isPrivate,
-                RxCost = rxCost ?? 0,
+                RxCost = rxCost,
                 ReciptNumber = reciptNum,
                 TicketNumber = ticketNum,
                 CollectionDate = collectionDate,
-                HasCollected = hasCollected
+                HasCollected = hasCollected,
+                History = new PackageHistory()
             };
 
-         
-            this.dbContext.Add(op_pkg);
-            await this.dbContext.SaveChangesAsync();
+            try
+            {
+                this.dbContext.Add(op_pkg);
+            }
+            catch(Exception e)
+            {
+                AddPatientErrorMessage = e.Message;
+            }
+
+            try
+            {
+                await this.dbContext.SaveChangesAsync();
+            }
+            catch(Exception e)
+            {
+                AddPatientErrorMessage = e.Message;
+            }
 
             return Page();
         }
