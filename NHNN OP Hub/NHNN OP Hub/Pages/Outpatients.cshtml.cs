@@ -92,7 +92,6 @@ namespace NHNN_OP_Hub.Pages
             AddPatientErrorMessage = "";
             OutpatientPackage op_pkg = new OutpatientPackage
             {
-                
                 Name = ptName,
                 MRN = this.MRN,
                 DateDispensed = DateTime.Now,
@@ -112,7 +111,7 @@ namespace NHNN_OP_Hub.Pages
             }
             catch(Exception e)
             {
-                AddPatientErrorMessage = e.Message;
+                AddPatientErrorMessage = "This patient could not be added.";
             }
 
             try
@@ -121,7 +120,7 @@ namespace NHNN_OP_Hub.Pages
             }
             catch(Exception e)
             {
-                AddPatientErrorMessage = e.Message;
+                AddPatientErrorMessage = "Database error: changes could not be saved. Please retry.";
             }
 
             return Page();
