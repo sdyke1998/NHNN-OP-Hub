@@ -29,6 +29,7 @@
             <button type="submit" id="searchButton">Search</button>
             <button>Clear</button>
         </form>
+        <p style="color:red">@Model.SearchPatientErrorMessage</p>
     </div>
 
     <div class="pt-table">
@@ -54,7 +55,7 @@
                 @{
                     @foreach (var pt in Model.PackagesToDisplay)
                     {
-                        <tr class="pt-data-row">
+                        <tr class="pt-data-row" onclick="window.location.href='/ViewRecord/@pt.WorkRequestID'">
                             <td>@pt.WorkRequestID</td>
                             <td>@pt.Name</td>
                             <td>@pt.MRN</td>
@@ -73,7 +74,7 @@
 
         </table>
     </div>
-    </div>
+    
 
     <h3 class="add-op-title">Add an outpatient package below</h3>
 
@@ -92,7 +93,7 @@
 
             <div class="form-group">
                 <label for="ticketNum">Ticket Number</label>
-                <input type="number" id="ticketNum" asp-for="ticketNum" />
+                <input type="number" id="ticketNum" asp-for="ticketNum" max="999" min="1"/>
             </div>
 
             <div class="form-group">
@@ -107,12 +108,12 @@
 
             <div class="form-group">
                 <label for="rxCost">Prescription Cost</label>
-                <input type="number" id="rxCost" asp-for="rxCost"/>
+                <input type="number" id="rxCost" asp-for="rxCost" min="0"/>
             </div>
 
             <div class="form-group">
                 <label for="reciptNum">Recipt Number</label>
-                <input type="number" id="reciptNum" asp-for="reciptNum" />
+                <input type="number" id="reciptNum" asp-for="reciptNum" min="1000"/>
             </div>
 
             <div class="form-group">
@@ -131,5 +132,6 @@
             </div>
             <button type="submit" id="loginButton">Enter</button>
         </form>
+        <p style="color:red">@Model.AddPatientErrorMessage</p>
     </div>
 </div>

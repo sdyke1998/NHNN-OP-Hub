@@ -56,7 +56,7 @@ namespace NHNN_OP_Hub.Pages
         public void OnGet()
         {
             PackagesToDisplay = dbContext.PatientPackages.OfType<OutpatientPackage>()
-                .Where(op => op.DateDispensed >= DateTime.Now.AddHours(-24))
+                .Where(op => op.DateDispensed >= DateTime.Now.AddDays(-7))
                     .OrderBy(op => op.DateDispensed).ToList<OutpatientPackage>();
         }
 
@@ -90,6 +90,7 @@ namespace NHNN_OP_Hub.Pages
         public async Task<IActionResult> OnPostEnterAsync()
         {
             AddPatientErrorMessage = "";
+
             OutpatientPackage op_pkg = new OutpatientPackage
             {
                 Name = ptName,
@@ -104,6 +105,8 @@ namespace NHNN_OP_Hub.Pages
                 HasCollected = hasCollected,
                 History = new PackageHistory()
             };
+
+            op_pkg.History += PackageChange.Initial();
 
             try
             {

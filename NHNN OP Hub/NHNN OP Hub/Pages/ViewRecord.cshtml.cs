@@ -112,9 +112,8 @@ namespace NHNN_OP_Hub.Pages
                 HasReturned = false,
                 DeliveryAddress = ""
             };
-
-            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
-            //newPostingPackage.History += PackageChangedTo(Edit.POSTING);
+            
+            newPostingPackage.History += PackageChange.PackageChangedTo(EditType.POSTING);
 
             dbContext.PatientPackages.Remove(PackageToView);
             dbContext.PatientPackages.Add(newPostingPackage);
@@ -145,9 +144,8 @@ namespace NHNN_OP_Hub.Pages
                 CollectionDate = DateOnly.FromDateTime(DateTime.Now.AddDays(7)),
                 HasCollected = false
             };
-
-            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
-            //newOutpatientPackage.History += PackageChangedTo(Edit.OUTPATIENT);
+            
+            newOutpatientPackage.History += PackageChange.PackageChangedTo(EditType.OUTPATIENT);
 
             dbContext.PatientPackages.Remove(PackageToView);
             dbContext.PatientPackages.Add(newOutpatientPackage);
@@ -181,16 +179,15 @@ namespace NHNN_OP_Hub.Pages
                 if (stage_hasReturned) ((PostingPackage)PackageToView).HasReturned = hasReturned;
                 if (stage_deliveryAddress) ((PostingPackage)PackageToView).DeliveryAddress = deliveryAddress;
             }
-
-            /* The following line will be removed once PatientPackage has been remigrated to account for the history*/
-            //PackageToView.History += GetPackageChange(PackageToView, dbContext);
-
+            
+            PackageToView.History += PackageChange.GetPackageChange(PackageToView, dbContext);
             dbContext.SaveChanges();
         }
 
-        public void OnGet()
+        public void OnGet(int id)
         {
-            PackageToView = dbContext.PatientPackages.Find(workRequestID);
+            PackageToView = dbContext.PatientPackages.Find(id);
+            workRequestID = id;
 
             if (PackageToView is OutpatientPackage) editType = EditType.OUTPATIENT;
             else editType = EditType.POSTING;

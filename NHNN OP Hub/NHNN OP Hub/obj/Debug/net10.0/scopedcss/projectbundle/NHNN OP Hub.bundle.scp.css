@@ -63,26 +63,6 @@
      --text-muted  #6b7280
 ============================================================ */
 
-:root[b-83bmtpmnkj] {
-    /* 1. Added your exact brand color variable */
-    --uclh-teal: #278D93;
-    --uclh-teal-hover: #1f7277;
-    --uclh-teal-light: #e6f4f5;
-    --teal-dark: #1d2b39;
-    /* 2. Dynamically map the project's mid-teal to your brand color */
-    --teal-mid: var(--uclh-teal);
-    --teal-hover: var(--uclh-teal-hover);
-    --teal-light: var(--uclh-teal-light);
-    --white: #ffffff;
-    --bg-subtle: #f4f7f9;
-    --border: #d1d5db;
-    --text-dark: #2d3748;
-    --text-muted: #6b7280;
-    --radius: 6px;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
-}
-
 /* ── Base ────────────────────────────────────────────────── */
 
 body[b-83bmtpmnkj] {
@@ -409,6 +389,11 @@ input:focus-visible[b-83bmtpmnkj] {
         grid-template-columns: 1fr;
     }
 }
+
+.pt-data-row :hover[b-83bmtpmnkj]{
+    cursor: pointer;
+    background-color: var(--uclh-teal-light);
+}
 /* /Pages/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
@@ -534,3 +519,338 @@ button.accept-policy[b-qb84yq8za6] {
     background-color: #ffffff;
     min-height: 100vh;
 }
+.home-button[b-zvh2a1e6t4] {
+    text-decoration: none !important;
+    color: inherit;
+}
+/* /Pages/ViewRecord.cshtml.rz.scp.css */
+/* ============================================================
+   NHNN Outpatients Hub — ViewRecord.css
+============================================================ */
+
+
+/* ── View Record Centering Wrapper ────────────── */
+.view-record-wrapper[b-p38n1m3b7s] {
+    display: flex;
+    flex-direction: column; /* Stack items top-to-bottom */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    /* Use most of the viewport height, minus some space for your layout's header */
+    min-height: calc(100vh - 120px);
+    padding: 2rem;
+    gap: 2.5rem; /* Adds neat breathing room between your table, history, and form */
+    margin: 0 auto;
+}
+
+    /* Optional: Constrain the width of the inner sections so they don't stretch awkwardly wide on large monitors */
+    .view-record-wrapper > div[b-p38n1m3b7s] {
+        width: 100%;
+        max-width: 900px;
+        /* If you want the inner contents of these divs centered as well, uncomment below: */
+        /* display: flex; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+    }
+
+body[b-p38n1m3b7s] {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-subtle);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ── Top Data Table ──────────────────────────────────────── */
+
+.view-package[b-p38n1m3b7s] {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    max-width: 1000px; /* Constrains the table from stretching */
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.package-to-view table[b-p38n1m3b7s] {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.package-to-view thead tr[b-p38n1m3b7s] {
+    background: var(--uclh-teal);
+    color: var(--white);
+}
+
+.package-to-view th[b-p38n1m3b7s] {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.package-to-view td[b-p38n1m3b7s] {
+    padding: 0.8rem 1rem;
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.pt-data-row[b-p38n1m3b7s] {
+    background: var(--white);
+}
+
+/* ── Package History Log ─────────────────────────────────── */
+
+.package-history[b-p38n1m3b7s] {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 1000px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    /* Keeps the log scrollable if there are many entries */
+    max-height: 150px;
+    overflow-y: auto;
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+}
+
+    .package-history p[b-p38n1m3b7s] {
+        margin: 0 0 0.5rem 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px dashed var(--border);
+        font-size: 0.85rem;
+        color: var(--text-dark);
+    }
+
+        .package-history p:last-child[b-p38n1m3b7s] {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+/* ── Edit Form ───────────────────────────────────────────── */
+
+.edit-form[b-p38n1m3b7s] {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    width: 100%;
+    max-width: 750px;
+    box-shadow: var(--shadow-sm);
+    box-sizing: border-box;
+}
+
+#pt-edit[b-p38n1m3b7s] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.25rem 1.5rem;
+    align-items: end;
+}
+
+/* ── The Dual-Input CSS Grid Trick ───────────────────────── */
+/* Aligns the main input on the left and the staging checkbox on the right */
+
+.form-group[b-p38n1m3b7s] {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 0.4rem 0.75rem;
+}
+
+    .form-group label[b-p38n1m3b7s] {
+        grid-column: 1 / -1; /* Spans across both columns */
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    /* Primary text/number/date inputs */
+    .form-group input:not([name*="stage"]):not([type="checkbox"])[b-p38n1m3b7s] {
+        grid-column: 1; /* Sits in the left column */
+        width: 100%;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+        background: var(--bg-subtle);
+        box-sizing: border-box;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    /* Primary checkbox inputs (like isPaying) */
+    .form-group input[type="checkbox"]:not([name*="stage"])[b-p38n1m3b7s] {
+        grid-column: 1;
+        justify-self: start;
+        width: 1.15rem;
+        height: 1.15rem;
+        accent-color: var(--teal-mid);
+        cursor: pointer;
+    }
+
+    /* Staging Checkboxes */
+    .form-group input[name*="stage"][b-p38n1m3b7s] {
+        grid-column: 2; /* Sits cleanly in the right column */
+        width: 1.15rem;
+        height: 1.15rem;
+        accent-color: var(--teal-hover);
+        cursor: pointer;
+        margin: 0;
+    }
+
+    /* Input Focus States */
+    .form-group input:not([type="checkbox"]):focus[b-p38n1m3b7s] {
+        outline: none;
+        border-color: var(--teal-mid);
+        box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
+        background: var(--white);
+    }
+
+/* ── Reset and Submit Buttons ────────────────────────────── */
+
+.form-reset[b-p38n1m3b7s] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+    .form-reset label[b-p38n1m3b7s] {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted);
+    }
+
+    .form-reset input[type="reset"][b-p38n1m3b7s] {
+        padding: 0.5rem 1.25rem;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: var(--white);
+        color: var(--text-dark);
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+        box-sizing: border-box;
+        transition: background 0.15s;
+    }
+
+        .form-reset input[type="reset"]:hover[b-p38n1m3b7s] {
+            background: var(--bg-subtle);
+        }
+
+#submitButton[b-p38n1m3b7s] {
+    padding: 0.52rem 1.75rem;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--uclh-teal);
+    color: var(--white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.15s;
+}
+
+    #submitButton:hover[b-p38n1m3b7s] {
+        background: var(--teal-hover);
+    }
+
+/* ── Secondary Switch Form Buttons ───────────────────────── */
+
+.form-to-posting button[b-p38n1m3b7s],
+.form-to-outpatient button[b-p38n1m3b7s] {
+    width: 100%;
+    margin-top: 1.25rem;
+    padding: 0.6rem;
+    background: transparent;
+    border: 1px dashed var(--border);
+    color: var(--text-muted);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+    .form-to-posting button:hover[b-p38n1m3b7s],
+    .form-to-outpatient button:hover[b-p38n1m3b7s] {
+        background: var(--bg-subtle);
+        color: var(--text-dark);
+        border-color: var(--text-muted);
+    }
+
+/* ── Focus-visible ───────────────────────────────────────── */
+button:focus-visible[b-p38n1m3b7s],
+input:focus-visible[b-p38n1m3b7s] {
+    outline: 2px solid var(--teal-mid);
+    outline-offset: 2px;
+}
+
+/* ── Responsive breakpoints ──────────────────────────────── */
+@media (max-width: 768px) {
+    body[b-p38n1m3b7s] {
+        padding: 1rem;
+    }
+
+    #pt-edit[b-p38n1m3b7s] {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Primary Checkbox Layout (Overrides Grid) ────────────── */
+/* Targets ONLY the form groups where the primary input is a checkbox */
+.form-group:has(input:first-of-type[type="checkbox"])[b-p38n1m3b7s] {
+    display: grid;
+    /* Forces exactly 3 columns: Primary Checkbox | Label | Staging Checkbox */
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+    /* 1. Put the primary checkbox perfectly on the left */
+    .form-group:has(input:first-of-type[type="checkbox"]) input[type="checkbox"]:not([name*="stage"])[b-p38n1m3b7s] {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    /* 2. Put the text label immediately next to the primary checkbox */
+    .form-group:has(input:first-of-type[type="checkbox"]) label[b-p38n1m3b7s] {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: start;
+        margin: 0; /* Clears any previous margins */
+    }
+
+    /* 3. Lock the staging checkbox to the far right edge */
+    .form-group:has(input:first-of-type[type="checkbox"]) input[type="checkbox"][name*="stage"][b-p38n1m3b7s] {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+        margin: 0;
+    }
+
+    /* 4. Prevent ASP.NET's secret hidden inputs from breaking the grid layout */
+    .form-group:has(input:first-of-type[type="checkbox"]) input[type="hidden"][b-p38n1m3b7s] {
+        display: none !important;
+    }

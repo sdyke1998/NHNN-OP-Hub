@@ -66,6 +66,8 @@ namespace NHNN_OP_Hub.Models
 
         public override string ToString()
         {
+            if (n_FieldsChanged == 1) return $"{Timestamp} : Package Created.";
+
             string output = $"{Timestamp} : ";
 
             for(int i = 0; i < n_FieldsChanged; i++)
@@ -81,14 +83,8 @@ namespace NHNN_OP_Hub.Models
     [Owned] //This annotator lets EF know that this class will be owned by each PatientPackage and will not create a primary key for objects of this type.
     public class PackageHistory : IEnumerable
     {
-        private List<PackageChange> Changes;
+        private List<PackageChange> Changes { get; set; } = new List<PackageChange>();
         public int Length => Changes.Count; //Lambda notation used as a shorthand for a getter with no setter.
-
-        public PackageHistory()
-        {
-            Changes = new List<PackageChange>();
-            Changes.Add(PackageChange.Initial());
-        }
 
         public IEnumerator GetEnumerator()
         {

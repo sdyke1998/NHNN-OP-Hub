@@ -12,26 +12,6 @@
      --text-muted  #6b7280
 ============================================================ */
 
-:root[b-83bmtpmnkj] {
-    /* 1. Added your exact brand color variable */
-    --uclh-teal: #278D93;
-    --uclh-teal-hover: #1f7277;
-    --uclh-teal-light: #e6f4f5;
-    --teal-dark: #1d2b39;
-    /* 2. Dynamically map the project's mid-teal to your brand color */
-    --teal-mid: var(--uclh-teal);
-    --teal-hover: var(--uclh-teal-hover);
-    --teal-light: var(--uclh-teal-light);
-    --white: #ffffff;
-    --bg-subtle: #f4f7f9;
-    --border: #d1d5db;
-    --text-dark: #2d3748;
-    --text-muted: #6b7280;
-    --radius: 6px;
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
-}
-
 /* ── Base ────────────────────────────────────────────────── */
 
 body[b-83bmtpmnkj] {
@@ -357,4 +337,9 @@ input:focus-visible[b-83bmtpmnkj] {
     #pt-entry[b-83bmtpmnkj] {
         grid-template-columns: 1fr;
     }
+}
+
+.pt-data-row :hover[b-83bmtpmnkj]{
+    cursor: pointer;
+    background-color: var(--uclh-teal-light);
 }

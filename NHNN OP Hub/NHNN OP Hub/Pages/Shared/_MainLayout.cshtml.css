@@ -73,3 +73,7 @@
     background-color: #ffffff;
     min-height: 100vh;
 }
+.home-button {
+    text-decoration: none !important;
+    color: inherit;
+}

@@ -1,150 +1,150 @@
-﻿@page
+﻿@page "{id:int}"
 @model NHNN_OP_Hub.Pages.ViewRecordModel
 @{
-    Layout = null;
+    Layout = "~/Pages/Shared/ViewRecordLayout.cshtml";
 }
 
-<div class="view-package">
+<div class="view-record-wrapper">
 
-    <div class="package-to-view">
-        <table>
+    <div class="view-package">
 
-            <thead>
-                <tr>
-                    <th>Work request ID</th>
-                    <th>Name</th>
-                    <th>MRN</th>
-                    <th>Date dispensed</th>
-                    <th>Is paying?</th>
-                    <th>Is private?</th>
-                    <th>Prescription cost</th>
-                    <th>Recipt number</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="pt-data-row">
-                    <td>@Model.PackageToView.WorkRequestID</td>
-                    <td>@Model.PackageToView.Name</td>
-                    <td>@Model.PackageToView.MRN</td>
-                    <td>@Model.PackageToView.DateDispensed</td>
-                    <td>@Model.PackageToView.IsPaying</td>
-                    <td>@Model.PackageToView.IsPrivate</td>
-                    <td>@Model.PackageToView.RxCost</td>
-                    <td>@Model.PackageToView.ReciptNumber</td>
-                </tr>
-            </tbody>
+        <div class="package-to-view">
+            <table>
 
-        </table>
+                <thead>
+                    <tr>
+                        <th>Work request ID</th>
+                        <th>Name</th>
+                        <th>MRN</th>
+                        <th>Date dispensed</th>
+                        <th>Is paying?</th>
+                        <th>Is private?</th>
+                        <th>Prescription cost</th>
+                        <th>Recipt number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="pt-data-row">
+                        <td>@Model.PackageToView.WorkRequestID</td>
+                        <td>@Model.PackageToView.Name</td>
+                        <td>@Model.PackageToView.MRN</td>
+                        <td>@Model.PackageToView.DateDispensed</td>
+                        <td>@Model.PackageToView.IsPaying</td>
+                        <td>@Model.PackageToView.IsPrivate</td>
+                        <td>@Model.PackageToView.RxCost</td>
+                        <td>@Model.PackageToView.ReciptNumber</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
     </div>
 
-    @if (Model.IsStagingChanges)
-    {
-        <div class="changes-staged">
+    <div class="package-history">
+        @foreach(var change in Model.PackageToView.History)
+        {
+            <p>@change</p>
+        }
+    </div>
 
-        </div>
-    }
+    <div class="edit-form">
+        <form id="pt-edit" method="POST" asp-page-handler="Edit">
 
-</div>
-
-<div class="package-history">
-
-</div>
-
-<div class="edit-form">
-    <form id="pt-edit" method="POST" asp-page-handler="Edit">
-
-        <div class="form-group">
-            <label for="ptName">Patient Name</label>
-            <input type="text" id="ptName" asp-for="ptName" />
-            <input type="checkbox" id="ptName" asp-for="stage_ptName" />
-        </div>
-
-        <div class="form-group">
-            <label for="MRN">MRN</label>
-            <input type="text" id="MRN" asp-for="MRN" />
-            <input type="checkbox" id="MRN" asp-for="stage_MRN" />
-        </div>
-
-
-        <div class="form-group">
-            <label for="isPaying">Is paying</label>
-            <input type="checkbox" id="isPaying" asp-for="isPaying" />
-            <input type="checkbox" id="isPaying" asp-for="stage_isPaying" />
-        </div>
-
-        <div class="form-group">
-            <label for="isPrivate">Private prescription</label>
-            <input type="checkbox" id="isPrivate" asp-for="isPrivate" />
-            <input type="checkbox" id="isPrivate" asp-for="stage_isPrivate" />
-        </div>
-
-        <div class="form-group">
-            <label for="rxCost">Prescription Cost</label>
-            <input type="number" id="rxCost" asp-for="rxCost" />
-            <input type="checkbox" id="rxCost" asp-for="stage_rxCost" />
-        </div>
-
-        <div class="form-group">
-            <label for="reciptNum">Recipt Number</label>
-            <input type="number" id="reciptNum" asp-for="reciptNum" />
-            <input type="checkbox" id="reciptNum" asp-for="stage_reciptNum" />
-        </div>
-
-        @if(Model.editType == EditType.OUTPATIENT)
-            {
             <div class="form-group">
-                <label for="ticketNum">Ticket Number</label>
-                <input type="number" id="ticketNum" asp-for="ticketNum" />
-                <input type="checkbox" id="ticketNum" asp-for="stage_ticketNum" />
-            </div>
-            <div class="form-group">
-                <label for="hasCollected">Prescription collected?</label>
-                <input type="checkbox" id="hasCollected" asp-for="hasCollected" />
-                <input type="checkbox" id="hasCollected" asp-for="stage_hasCollected" />
+                <label for="ptName">Patient Name</label>
+                <input type="text" id="ptName" asp-for="ptName" />
+                <input type="checkbox" id="ptName" asp-for="stage_ptName" />
             </div>
 
             <div class="form-group">
-                <label for="collectionDate">Collection date</label>
-                <input type="date" id="collectionDate" asp-for="collectionDate" />
-                <input type="checkbox" id="collectionDate" asp-for="stage_collectionDate" />
-            </div>
-            }
-            else
-            {
-            <div class="form-group">
-                <label for="trackingNumber">Tracking number</label>
-                <input type="text" id="trackingNumber" asp-for="trackingNumber" />
-                <input type="checkbox" id="trackingNumber" asp-for="stage_trackingNumber" />
+                <label for="MRN">MRN</label>
+                <input type="text" id="MRN" asp-for="MRN" />
+                <input type="checkbox" id="MRN" asp-for="stage_MRN" />
             </div>
 
+
             <div class="form-group">
-                <label for="hasReturned">Has the package returned?</label>
-                <input type="checkbox" id="hasReturned" asp-for="hasReturned" />
-                <input type="checkbox" id="hasReturned" asp-for="stage_hasReturned" />
+                <label for="isPaying">Is paying</label>
+                <input type="checkbox" id="isPaying" asp-for="isPaying" />
+                <input type="checkbox" id="isPaying" asp-for="stage_isPaying" />
             </div>
 
             <div class="form-group">
-                <label for="deliveryAddress">Delivery address</label>
-                <input type="text" id="deliveryAddress" asp-for="deliveryAddress" />
-                <input type="checkbox" id="deliveryAddress" asp-for="stage_deliveryAddress" />
+                <label for="isPrivate">Private prescription</label>
+                <input type="checkbox" id="isPrivate" asp-for="isPrivate" />
+                <input type="checkbox" id="isPrivate" asp-for="stage_isPrivate" />
             </div>
-            }
 
-        <div class="form-reset">
-            <label for="reset">Reset</label>
-            <input type="reset" id="reset" />
-        </div>
+            <div class="form-group">
+                <label for="rxCost">Prescription Cost</label>
+                <input type="number" id="rxCost" asp-for="rxCost" />
+                <input type="checkbox" id="rxCost" asp-for="stage_rxCost" />
+            </div>
 
-        <button type="submit" id="submitButton">Enter</button>
-    </form>
+            <div class="form-group">
+                <label for="reciptNum">Recipt Number</label>
+                <input type="number" id="reciptNum" asp-for="reciptNum" />
+                <input type="checkbox" id="reciptNum" asp-for="stage_reciptNum" />
+            </div>
 
-    <form class="form-to-posting" method="post" asp-page-handler="SwitchToPosting">
-        <button type="submit">Change to posting package</button>
-    </form>
+            @if(Model.editType == EditType.OUTPATIENT)
+                {
+                <div class="form-group">
+                    <label for="ticketNum">Ticket Number</label>
+                    <input type="number" id="ticketNum" asp-for="ticketNum" />
+                    <input type="checkbox" id="ticketNum" asp-for="stage_ticketNum" />
+                </div>
+                <div class="form-group">
+                    <label for="hasCollected">Prescription collected?</label>
+                    <input type="checkbox" id="hasCollected" asp-for="hasCollected" />
+                    <input type="checkbox" id="hasCollected" asp-for="stage_hasCollected" />
+                </div>
 
-    <form class="form-to-outpatient" method="post" asp-page-handler="SwitchToOutpatient">
-        <button type="submit">Change to outpatient package</button>
-    </form>
+                <div class="form-group">
+                    <label for="collectionDate">Collection date</label>
+                    <input type="date" id="collectionDate" asp-for="collectionDate" />
+                    <input type="checkbox" id="collectionDate" asp-for="stage_collectionDate" />
+                </div>
+                }
+                else
+                {
+                <div class="form-group">
+                    <label for="trackingNumber">Tracking number</label>
+                    <input type="text" id="trackingNumber" asp-for="trackingNumber" />
+                    <input type="checkbox" id="trackingNumber" asp-for="stage_trackingNumber" />
+                </div>
+
+                <div class="form-group">
+                    <label for="hasReturned">Has the package returned?</label>
+                    <input type="checkbox" id="hasReturned" asp-for="hasReturned" />
+                    <input type="checkbox" id="hasReturned" asp-for="stage_hasReturned" />
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryAddress">Delivery address</label>
+                    <input type="text" id="deliveryAddress" asp-for="deliveryAddress" />
+                    <input type="checkbox" id="deliveryAddress" asp-for="stage_deliveryAddress" />
+                </div>
+                }
+
+            <div class="form-reset">
+                <label for="reset">Reset</label>
+                <input type="reset" id="reset" />
+            </div>
+
+            <button type="submit" id="submitButton">Enter</button>
+        </form>
+
+        <form class="form-to-posting" method="post" asp-page-handler="SwitchToPosting">
+            <button type="submit">Change to posting package</button>
+        </form>
+
+        <form class="form-to-outpatient" method="post" asp-page-handler="SwitchToOutpatient">
+            <button type="submit">Change to outpatient package</button>
+        </form>
+    </div>
+
 </div>
 
 <script>
@@ -161,6 +161,17 @@
 
             mainInput.addEventListener(eventType, function () {
                 stageCheckbox.checked = true;
+            });
+
+            stageCheckbox.addEventListener('change', function () {
+                if (!this.checked) {
+
+                    if (mainInput.type === 'checkbox') {
+                        mainInput.checked = false;
+                    } else {
+                        mainInput.value = '';
+                    }
+                }
             });
         }
     });
