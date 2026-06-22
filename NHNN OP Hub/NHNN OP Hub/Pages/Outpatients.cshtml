@@ -25,9 +25,13 @@
                 <label for="byDate">Search by Date</label>
                 <input type="date" id="byDate" asp-for="ByDate" value=""/>
             </div>
-        
+            
+            <div class="search-group"
+                <label for="reset">Clear</label>
+                <input type="reset" id="reset" />
+            </div>
+
             <button type="submit" id="searchButton">Search</button>
-            <button>Clear</button>
         </form>
         <p style="color:red">@Model.SearchPatientErrorMessage</p>
     </div>

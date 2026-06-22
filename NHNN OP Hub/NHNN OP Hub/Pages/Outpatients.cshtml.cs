@@ -52,12 +52,17 @@ namespace NHNN_OP_Hub.Pages
         [BindProperty]
         public DateOnly collectionDate { get; set; } = DateOnly.FromDateTime(DateTime.Now.AddDays(7));
 
-        //On start-up, display all records added within the last 24hrs
-        public void OnGet()
+        public void ShowRecentPatients(int days_ago = 7)
         {
             PackagesToDisplay = dbContext.PatientPackages.OfType<OutpatientPackage>()
                 .Where(op => op.DateDispensed >= DateTime.Now.AddDays(-7))
                     .OrderBy(op => op.DateDispensed).ToList<OutpatientPackage>();
+        }
+
+        //On start-up, display all records added within the last 24hrs
+        public void OnGet()
+        {
+            ShowRecentPatients();
         }
 
         public async Task<IActionResult> OnPostSearchAsync()
@@ -126,6 +131,7 @@ namespace NHNN_OP_Hub.Pages
                 AddPatientErrorMessage = "Database error: changes could not be saved. Please retry.";
             }
 
+            ShowRecentPatients();
             return Page();
         }
     }
