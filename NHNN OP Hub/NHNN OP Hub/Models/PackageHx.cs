@@ -76,6 +76,7 @@ namespace NHNN_OP_Hub.Models
                 if (i - 1 != n_FieldsChanged) output += " ";
             }
 
+            Console.WriteLine(FieldNames);
             return output;
         }
     }

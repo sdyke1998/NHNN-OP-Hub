@@ -1,0 +1,228 @@
+/* ============================================================
+   NHNN Outpatients Hub — Posting.cshtml.css (Isolated Styles)
+   ============================================================ */
+
+/* ── Main body wrapper ───────────────────────────────────── */
+.main-body[b-kzqqi50oeo] {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* ── Section containers ──────────────────────────────────── */
+.search-db[b-kzqqi50oeo],
+.pt-table[b-kzqqi50oeo],
+.pt-entry-form[b-kzqqi50oeo] {
+    background: var(--white, #ffffff);
+    border: 1px solid var(--border, #d1d5db);
+    border-radius: var(--radius, 6px);
+    box-shadow: var(--shadow-sm, 0 1px 2px 0 rgba(0, 0, 0, 0.05));
+}
+
+/* ── Search section ──────────────────────────────────────── */
+.search-db[b-kzqqi50oeo] {
+    padding: 1.25rem 1.5rem;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#search-form[b-kzqqi50oeo] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1.25rem;
+}
+
+.search-group[b-kzqqi50oeo] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+    .search-group label[b-kzqqi50oeo] {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted, #6b7280);
+    }
+
+    .search-group input[b-kzqqi50oeo] {
+        border: 1px solid var(--border, #d1d5db);
+        border-radius: var(--radius, 6px);
+        padding: 0.45rem 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-dark, #2d3748);
+        background: var(--bg-subtle, #f4f7f9);
+        width: 220px;
+        box-sizing: border-box;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+        .search-group input:focus[b-kzqqi50oeo] {
+            outline: none;
+            border-color: var(--teal-mid, #278D93);
+            box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
+            background: var(--white, #ffffff);
+        }
+
+#searchButton[b-kzqqi50oeo] {
+    background: var(--teal-mid, #278D93);
+    color: var(--white, #ffffff);
+    border: 1px solid var(--teal-mid, #278D93);
+    padding: 0.47rem 1.5rem;
+    border-radius: var(--radius, 6px);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    #searchButton:hover[b-kzqqi50oeo] {
+        background: var(--teal-hover, #1e6b70);
+        border-color: var(--teal-hover, #1e6b70);
+    }
+
+/* ── Patient table ───────────────────────────────────────── */
+.pt-table[b-kzqqi50oeo] {
+    overflow-x: auto;
+}
+
+    .pt-table table[b-kzqqi50oeo] {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+    }
+
+    .pt-table thead tr[b-kzqqi50oeo] {
+        background: var(--uclh-teal, #278D93);
+        color: var(--white, #ffffff);
+    }
+
+    .pt-table th[b-kzqqi50oeo] {
+        padding: 0.8rem 1rem;
+        text-align: left;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+    }
+
+    .pt-table td[b-kzqqi50oeo] {
+        padding: 0.7rem 1rem;
+        border-bottom: 1px solid var(--border, #d1d5db);
+        color: var(--text-dark, #2d3748);
+        white-space: nowrap;
+    }
+
+    .pt-table tbody tr:last-child td[b-kzqqi50oeo] {
+        border-bottom: none;
+    }
+
+    .pt-table tbody tr:nth-child(even)[b-kzqqi50oeo] {
+        background: var(--white, #ffffff);
+    }
+
+    .pt-table tbody tr:nth-child(odd)[b-kzqqi50oeo] {
+        background: var(--bg-subtle, #f4f7f9);
+    }
+
+    /* Fixed row hover rule with unified syntax and fallback color variables */
+    .pt-table tbody tr.pt-data-row:hover[b-kzqqi50oeo] {
+        cursor: pointer;
+        background-color: var(--teal-light, #e6f4f5) !important;
+    }
+
+/* ── Patient entry form ──────────────────────────────────── */
+.add-op-title[b-kzqqi50oeo] {
+    margin: 1.5rem 2rem 0.5rem;
+    color: var(--text-dark, #2d3748);
+    font-size: 1.25rem;
+}
+
+.pt-entry-form[b-kzqqi50oeo] {
+    padding: 1.75rem;
+    margin: 0 2rem 2rem;
+    max-width: 750px;
+    box-sizing: border-box;
+}
+
+#pt-entry[b-kzqqi50oeo] {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.25rem 1.5rem;
+    align-items: end;
+}
+
+.form-group[b-kzqqi50oeo] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+    .form-group label[b-kzqqi50oeo] {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--text-muted, #6b7280);
+    }
+
+    .form-group input[type="text"][b-kzqqi50oeo],
+    .form-group input[type="number"][b-kzqqi50oeo],
+    .form-group input[type="date"][b-kzqqi50oeo] {
+        border: 1px solid var(--border, #d1d5db);
+        border-radius: var(--radius, 6px);
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+        color: var(--text-dark, #2d3748);
+        background: var(--bg-subtle, #f4f7f9);
+        width: 100%;
+        box-sizing: border-box;
+        transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+        .form-group input[type="text"]:focus[b-kzqqi50oeo],
+        .form-group input[type="number"]:focus[b-kzqqi50oeo],
+        .form-group input[type="date"]:focus[b-kzqqi50oeo] {
+            outline: none;
+            border-color: var(--teal-mid, #278D93);
+            box-shadow: 0 0 0 3px rgba(39, 141, 147, 0.18);
+            background: var(--white, #ffffff);
+        }
+
+    .form-group:has(input[type="checkbox"])[b-kzqqi50oeo] {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.6rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .form-group input[type="checkbox"][b-kzqqi50oeo] {
+        width: 1.15rem;
+        height: 1.15rem;
+        accent-color: var(--teal-mid, #278D93);
+        cursor: pointer;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+#loginButton[b-kzqqi50oeo] {
+    padding: 0.52rem 1.75rem;
+    border: none;
+    border-radius: var(--radius, 6px);
+    background: var(--teal-mid, #278D93);
+    color: var(--white, #ffffff);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background 0.15s;
+}
+
+    #loginButton:hover[b-kzqqi50oeo] {
+        background: var(--teal-hover, #1e6b70);
+    }

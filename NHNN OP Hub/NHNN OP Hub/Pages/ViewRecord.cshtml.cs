@@ -20,7 +20,7 @@ namespace NHNN_OP_Hub.Pages
         /*
          * Variables required for interacting with webpage
          */
-        private int workRequestID;
+        [BindProperty(SupportsGet = true)] public int workRequestID { get; set; }
         public PatientPackage PackageToView;
         public string ErrorMessage;
         public EditType editType;
@@ -92,6 +92,8 @@ namespace NHNN_OP_Hub.Pages
 
         public void OnPostSwitchToPosting()
         {
+            PackageToView = dbContext.PatientPackages.Find(workRequestID);
+
             if (PackageToView is PostingPackage)
             {
                 ErrorMessage = "This package is already for posting!";
@@ -124,6 +126,8 @@ namespace NHNN_OP_Hub.Pages
 
         public void OnPostSwitchToOutpatient()
         {
+            PackageToView = dbContext.PatientPackages.Find(workRequestID);
+
             if (PackageToView is OutpatientPackage)
             {
                 ErrorMessage = "This package is already for outpatients!";
@@ -156,6 +160,7 @@ namespace NHNN_OP_Hub.Pages
 
         public void OnPostEdit()
         {
+            PackageToView = dbContext.PatientPackages.Find(workRequestID);
 
             if (stage_ptName) PackageToView.Name = ptName;
             if (stage_MRN) PackageToView.MRN = MRN;
@@ -184,10 +189,22 @@ namespace NHNN_OP_Hub.Pages
             dbContext.SaveChanges();
         }
 
-        public void OnGet(int id)
+        public async Task<IActionResult> OnPostDeletePatientAsync()
         {
-            PackageToView = dbContext.PatientPackages.Find(id);
-            workRequestID = id;
+            PackageToView = dbContext.PatientPackages.Find(workRequestID);
+            dbContext.PatientPackages.Remove(PackageToView);
+            dbContext.SaveChanges();
+
+            if (editType == EditType.POSTING) return RedirectToPage("/Posting");
+            else return RedirectToPage("/Outpatients"); ;
+        }
+
+        public async Task<IActionResult> OnPostToPostingAsync() => RedirectToPage("/Posting");
+        public async Task<IActionResult> OnPostToOutpatientsAsync() => RedirectToPage("/Outpatients");
+
+        public void OnGet(int workRequestID)
+        {
+            PackageToView = dbContext.PatientPackages.Find(workRequestID);
 
             if (PackageToView is OutpatientPackage) editType = EditType.OUTPATIENT;
             else editType = EditType.POSTING;

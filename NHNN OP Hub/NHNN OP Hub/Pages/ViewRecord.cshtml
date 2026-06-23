@@ -1,4 +1,4 @@
-﻿@page "{id:int}"
+﻿@page "{workRequestID:int}"
 @model NHNN_OP_Hub.Pages.ViewRecordModel
 @{
     Layout = "~/Pages/Shared/ViewRecordLayout.cshtml";
@@ -142,6 +142,19 @@
 
         <form class="form-to-outpatient" method="post" asp-page-handler="SwitchToOutpatient">
             <button type="submit">Change to outpatient package</button>
+        </form>
+
+        <form class="form-to-delete" method="post" asp-page-handler="DeletePatient">
+            <button type="submit">Delete Patient</button>
+        </form>
+    </div>
+
+    <div class="return-btns">
+        <form class="return-to" method="post" asp-page-handler="ToPosting">
+            <button type="submit">Return to posting</button>
+        </form>
+        <form class="return-to" method="post" asp-page-handler="ToOutpatients">
+            <button type="submit">Return to outpatients</button>
         </form>
     </div>
 

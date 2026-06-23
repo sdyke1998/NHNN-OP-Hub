@@ -35,10 +35,6 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/sd199/Desktop/NHNN OP Hub/NHNN OP Hub/NHNN OP Hub/Pages/Posting.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdGluZy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/sd199/Desktop/NHNN OP Hub/NHNN OP Hub/NHNN OP Hub/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,6 +66,10 @@ build_metadata.AdditionalFiles.CssScope = b-9frygalbvd
 [C:/Users/sd199/Desktop/NHNN OP Hub/NHNN OP Hub/NHNN OP Hub/Pages/Outpatients.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3V0cGF0aWVudHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-83bmtpmnkj
+
+[C:/Users/sd199/Desktop/NHNN OP Hub/NHNN OP Hub/NHNN OP Hub/Pages/Posting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUG9zdGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-kzqqi50oeo
 
 [C:/Users/sd199/Desktop/NHNN OP Hub/NHNN OP Hub/NHNN OP Hub/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s

@@ -228,5 +228,6 @@ C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\sta
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\scopedcss\Pages\Outpatients.cshtml.rz.scp.css
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\mv6qd2oh8p-{0}-i30toau8nn-i30toau8nn.gz
 C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\scopedcss\Pages\ViewRecord.cshtml.rz.scp.css
-C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\h31qqz93gu-{0}-ykajyhdxy0-ykajyhdxy0.gz
-C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\8e2cyfam7b-{0}-ykajyhdxy0-ykajyhdxy0.gz
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\scopedcss\Pages\Posting.cshtml.rz.scp.css
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\h31qqz93gu-{0}-3kquqf7d64-3kquqf7d64.gz
+C:\Users\sd199\Desktop\NHNN OP Hub\NHNN OP Hub\NHNN OP Hub\obj\Debug\net10.0\compressed\8e2cyfam7b-{0}-3kquqf7d64-3kquqf7d64.gz
